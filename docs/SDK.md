@@ -8,6 +8,43 @@ This SDK focuses on editing theme colors and fonts in PowerPoint `.potx` files. 
 poetry install
 ```
 
+## MCP server
+
+The MCP server is the default entry point and runs over stdio (FastMCP).
+
+```bash
+uvx potxkit
+```
+
+Use the CLI via:
+
+```bash
+poetry run potxkit-cli --help
+```
+
+## MCP tools (summary)
+
+- `info(path)`: theme colors/fonts + validation status.
+- `validate(path)`: validation errors/warnings.
+- `dump_theme(path, pretty=false)`: theme JSON.
+- `audit(path, slides=None, group_by="p,l")`: hard-coded colors + overrides.
+- `dump_tree(path, slides=None, grouped=false, include_layout=false, include_master=false, include_text=false, summary=false)`: hierarchical view (or summary).
+- `normalize(input_path, output, mapping, slides=None)`: replace hard-coded colors with scheme slots.
+- `set_colors(input_path, output, colors)`: set theme color slots.
+- `set_fonts(input_path, output, major=None, minor=None)`: set theme fonts.
+- `set_theme_names(input_path, output, theme=None, colors=None, fonts=None)`: name theme/schemes.
+- `make_layout(input_path, output, from_slide, name, master_index=1, assign_slides=None)`: create layout from slide.
+- `set_layout(input_path, output, layout, palette=None, palette_none=false, font=None, fonts_none=false)`: update layout.
+- `set_master(input_path, output, master="1", palette=None, palette_none=false, font=None, fonts_none=false)`: update master.
+- `set_slide(input_path, output, slides, layout=None, palette=None, palette_none=false, font=None, fonts_none=false)`: update slides.
+- `set_text_styles(input_path, output, layout=None, master=None, title_size=None, body_size=None, title_bold=None, body_bold=None)`: set title/body sizes/bold.
+- `set_layout_bg(input_path, output, layout, image)`: layout background image.
+- `set_layout_image(input_path, output, layout, image, x=None, y=None, w=None, h=None, units="in", name=None)`: add layout image layer.
+- `auto_layout(input_path, output, group_by="p,l", prefix="Auto Layout", master_index=1, assign=true, strip_colors=false, strip_fonts=false, palette=None)`: auto-generate layouts.
+- `prune_layouts(input_path, output)`: remove unused layouts.
+- `reindex_layouts(input_path, output)`: reindex layout ids and refs.
+- `sanitize(input_path, output, slides=None)`: add OOXML defaults to prevent repair prompts.
+
 ## Core API
 
 ### `PotxTemplate`
@@ -33,43 +70,43 @@ from potxkit import PotxTemplate
 The CLI is available after installing dependencies with Poetry.
 
 ```bash
-poetry run potxkit --help
+poetry run potxkit-cli --help
 ```
 
 Commands:
 
 ```bash
-poetry run potxkit new output.potx
-poetry run potxkit palette-template --pretty > palette.json
-poetry run potxkit palette-template --output palette.json
-poetry run potxkit info path/to/template.potx
-poetry run potxkit apply-palette examples/palette.json output.potx --input path/to/template.potx
-poetry run potxkit apply-palette examples/palette.json output.potx
-poetry run potxkit validate path/to/template.potx
-poetry run potxkit audit path/to/template.pptx --pretty --output audit.json
-poetry run potxkit audit path/to/template.pptx --summary
-poetry run potxkit audit path/to/template.pptx --summary --details
-poetry run potxkit audit path/to/template.pptx --summary --group-by p,b,l
-poetry run potxkit dump-theme path/to/template.potx --pretty
-poetry run potxkit normalize examples/mapping.json output.pptx --input path/to/template.pptx --slides 1,3-5
-poetry run potxkit set-colors output.potx --input path/to/template.potx --accent1 #1F6BFF --hlink #1F6BFF
-poetry run potxkit set-fonts output.potx --input path/to/template.potx --major "Aptos Display" --minor "Aptos"
-poetry run potxkit set-master --master 1 --palette-none output.pptx --input path/to/template.pptx
-poetry run potxkit set-theme-names output.potx --input path/to/template.potx --theme "Code Janitor" --colors "Code Janitor Colors" --fonts "Code Janitor Fonts"
-poetry run potxkit make-layout --from-slide 7 --name "Layout Bob" --assign-slides 1-7,9-10 output.pptx --input path/to/template.pptx
-poetry run potxkit set-layout --layout "Layout Bob" --palette examples/mapping.json output.pptx --input path/to/template.pptx
-poetry run potxkit set-slide --slides 1-11 --palette-none --fonts-none output.pptx --input path/to/template.pptx
-poetry run potxkit set-text-styles --layout "Layout Bob" --title-size 30 --title-bold --body-size 20 --body-regular output.pptx --input path/to/template.pptx
-poetry run potxkit set-text-styles --layout "Layout Bob" --styles examples/styles.json output.pptx --input path/to/template.pptx
-poetry run potxkit set-layout-bg --layout "Layout Bob" --image path/to/hero.png output.pptx --input path/to/template.pptx
-poetry run potxkit set-layout-image --layout "Layout Bob" --image path/to/overlay.png --x 1 --y 1 --w 3 --h 2 output.pptx --input path/to/template.pptx
-poetry run potxkit prune-layouts output.pptx --input path/to/template.pptx
-poetry run potxkit reindex-layouts output.pptx --input path/to/template.pptx
-poetry run potxkit sanitize output.pptx --input path/to/template.pptx
-poetry run potxkit dump-tree path/to/template.pptx --layout --master --text --pretty --output tree.json
-poetry run potxkit dump-tree path/to/template.pptx --grouped --text --pretty --output tree_grouped.json
-poetry run potxkit dump-tree path/to/template.pptx --grouped --text --summary --output tree_summary.txt
-poetry run potxkit auto-layout output.pptx --input path/to/template.pptx --group-by p,b --strip-colors --strip-fonts
+poetry run potxkit-cli new output.potx
+poetry run potxkit-cli palette-template --pretty > palette.json
+poetry run potxkit-cli palette-template --output palette.json
+poetry run potxkit-cli info path/to/template.potx
+poetry run potxkit-cli apply-palette examples/palette.json output.potx --input path/to/template.potx
+poetry run potxkit-cli apply-palette examples/palette.json output.potx
+poetry run potxkit-cli validate path/to/template.potx
+poetry run potxkit-cli audit path/to/template.pptx --pretty --output audit.json
+poetry run potxkit-cli audit path/to/template.pptx --summary
+poetry run potxkit-cli audit path/to/template.pptx --summary --details
+poetry run potxkit-cli audit path/to/template.pptx --summary --group-by p,b,l
+poetry run potxkit-cli dump-theme path/to/template.potx --pretty
+poetry run potxkit-cli normalize examples/mapping.json output.pptx --input path/to/template.pptx --slides 1,3-5
+poetry run potxkit-cli set-colors output.potx --input path/to/template.potx --accent1 #1F6BFF --hlink #1F6BFF
+poetry run potxkit-cli set-fonts output.potx --input path/to/template.potx --major "Aptos Display" --minor "Aptos"
+poetry run potxkit-cli set-master --master 1 --palette-none output.pptx --input path/to/template.pptx
+poetry run potxkit-cli set-theme-names output.potx --input path/to/template.potx --theme "Code Janitor" --colors "Code Janitor Colors" --fonts "Code Janitor Fonts"
+poetry run potxkit-cli make-layout --from-slide 7 --name "Layout Bob" --assign-slides 1-7,9-10 output.pptx --input path/to/template.pptx
+poetry run potxkit-cli set-layout --layout "Layout Bob" --palette examples/mapping.json output.pptx --input path/to/template.pptx
+poetry run potxkit-cli set-slide --slides 1-11 --palette-none --fonts-none output.pptx --input path/to/template.pptx
+poetry run potxkit-cli set-text-styles --layout "Layout Bob" --title-size 30 --title-bold --body-size 20 --body-regular output.pptx --input path/to/template.pptx
+poetry run potxkit-cli set-text-styles --layout "Layout Bob" --styles examples/styles.json output.pptx --input path/to/template.pptx
+poetry run potxkit-cli set-layout-bg --layout "Layout Bob" --image path/to/hero.png output.pptx --input path/to/template.pptx
+poetry run potxkit-cli set-layout-image --layout "Layout Bob" --image path/to/overlay.png --x 1 --y 1 --w 3 --h 2 output.pptx --input path/to/template.pptx
+poetry run potxkit-cli prune-layouts output.pptx --input path/to/template.pptx
+poetry run potxkit-cli reindex-layouts output.pptx --input path/to/template.pptx
+poetry run potxkit-cli sanitize output.pptx --input path/to/template.pptx
+poetry run potxkit-cli dump-tree path/to/template.pptx --layout --master --text --pretty --output tree.json
+poetry run potxkit-cli dump-tree path/to/template.pptx --grouped --text --pretty --output tree_grouped.json
+poetry run potxkit-cli dump-tree path/to/template.pptx --grouped --text --summary --output tree_summary.txt
+poetry run potxkit-cli auto-layout output.pptx --input path/to/template.pptx --group-by p,b --strip-colors --strip-fonts
 ```
 
 ### Normalize mappings

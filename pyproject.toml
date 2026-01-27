@@ -9,10 +9,12 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "fsspec>=2024.2.0",
+    "fastmcp>=0.1.5",
 ]
 
 [project.scripts]
-potxkit = "potxkit.cli:main"
+potxkit = "potxkit.mcp_server:main"
+potxkit-cli = "potxkit.cli:main"
 
 [tool.poetry]
 packages = [{include = "potxkit", from = "src"}]
