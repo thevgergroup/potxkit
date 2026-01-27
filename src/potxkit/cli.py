@@ -9,10 +9,11 @@ from typing import Any
 from . import PotxTemplate
 from .audit import AuditReport, audit_package
 from .auto_layout import auto_layout
+from .dump_tree import DumpTreeOptions, dump_tree, summarize_tree
 from .layout_ops import (
+    add_layout_image_shape,
     apply_palette_to_part,
     assign_slides_to_layout,
-    add_layout_image_shape,
     make_layout_from_slide,
     prune_unused_layouts,
     reindex_layouts,
@@ -29,7 +30,6 @@ from .layout_ops import (
 from .normalize import NormalizeResult, normalize_slide_colors, parse_slide_numbers
 from .package import OOXMLPackage
 from .sanitize import sanitize_slides
-from .dump_tree import DumpTreeOptions, dump_tree, summarize_tree
 from .slide_index import slide_parts_in_order
 from .storage import read_bytes, write_bytes
 from .typography import detect_placeholder_styles
@@ -112,7 +112,9 @@ def main(argv: list[str] | None = None) -> int:
         "palette-template", help="Print or write an example palette JSON"
     )
     palette_parser.add_argument("--output", help="Optional JSON output path")
-    palette_parser.add_argument("--pretty", action="store_true", help="Pretty-print JSON")
+    palette_parser.add_argument(
+        "--pretty", action="store_true", help="Pretty-print JSON"
+    )
 
     dump_parser = subparsers.add_parser(
         "dump-theme", help="Write the theme colors and fonts as JSON"
@@ -332,7 +334,9 @@ def main(argv: list[str] | None = None) -> int:
         "dump-tree", help="Dump a hierarchical view of slides"
     )
     dump_tree_parser.add_argument("path", help="Input .pptx/.potx path")
-    dump_tree_parser.add_argument("--slides", help="Comma-separated slide numbers or ranges")
+    dump_tree_parser.add_argument(
+        "--slides", help="Comma-separated slide numbers or ranges"
+    )
     dump_tree_parser.add_argument("--layout", action="store_true")
     dump_tree_parser.add_argument("--master", action="store_true")
     dump_tree_parser.add_argument("--text", action="store_true")
@@ -460,7 +464,9 @@ def _handle_info(path: str) -> int:
     return 0 if report.ok else 1
 
 
-def _handle_apply_palette(palette_path: str, output: str, input_path: str | None) -> int:
+def _handle_apply_palette(
+    palette_path: str, output: str, input_path: str | None
+) -> int:
     palette = _load_palette(palette_path)
     tpl = _load_template(input_path)
     _apply_palette(tpl, palette)
@@ -956,7 +962,9 @@ def _theme_to_json(tpl: PotxTemplate) -> dict[str, Any]:
     return payload
 
 
-def _apply_palette_and_fonts(pkg: OOXMLPackage, part: str, args: argparse.Namespace) -> None:
+def _apply_palette_and_fonts(
+    pkg: OOXMLPackage, part: str, args: argparse.Namespace
+) -> None:
     if args.palette:
         mapping = _load_mapping(args.palette)
         apply_palette_to_part(pkg, part, mapping)
@@ -985,14 +993,21 @@ def _slide_parts_for_numbers(pkg: OOXMLPackage, slide_numbers: set[int]) -> list
     return selected
 
 
-def _resolve_image_box(args: argparse.Namespace, cx: int, cy: int) -> tuple[int, int, int, int]:
+def _resolve_image_box(
+    args: argparse.Namespace, cx: int, cy: int
+) -> tuple[int, int, int, int]:
     x = args.x if args.x is not None else 0
     y = args.y if args.y is not None else 0
     w = args.w if args.w is not None else None
     h = args.h if args.h is not None else None
 
     if args.units == "emu":
-        return int(x), int(y), int(w if w is not None else cx), int(h if h is not None else cy)
+        return (
+            int(x),
+            int(y),
+            int(w if w is not None else cx),
+            int(h if h is not None else cy),
+        )
 
     factor = 914400
     x_emu = int(x * factor)
@@ -1144,9 +1159,7 @@ def _print_audit_summary(report: AuditReport, *, details: bool) -> None:
             hardcoded_details.append(f"shape={shape_counts['srgb']}")
         if hardcoded:
             if hardcoded_details:
-                flags.append(
-                    f"hardcoded={hardcoded} ({', '.join(hardcoded_details)})"
-                )
+                flags.append(f"hardcoded={hardcoded} ({', '.join(hardcoded_details)})")
             else:
                 flags.append(f"hardcoded={hardcoded}")
         if data["has_clrMapOvr"]:
@@ -1176,9 +1189,7 @@ def _print_audit_summary(report: AuditReport, *, details: bool) -> None:
 
 
 def _format_top_colors(entries: list[dict[str, int]]) -> str:
-    return ", ".join(
-        [f"#{entry['value']}({entry['count']})" for entry in entries]
-    )
+    return ", ".join([f"#{entry['value']}({entry['count']})" for entry in entries])
 
 
 def _format_palette(values: list[str]) -> str:
@@ -1256,6 +1267,7 @@ def _parse_group_by(value: str | None) -> list[str]:
         if token not in result:
             result.append(token)
     return result
+
 
 def _set_if_present(func, mapping: dict[str, Any], key: str) -> int:
     if key in mapping and mapping[key] is not None:

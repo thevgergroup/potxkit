@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 import io
-import zipfile
 import xml.etree.ElementTree as ET
+import zipfile
 
 from potxkit.normalize import normalize_slide_colors, parse_slide_numbers
 from potxkit.package import OOXMLPackage
@@ -34,33 +34,33 @@ def test_normalize_selected_slides() -> None:
 
 def _minimal_pptx() -> bytes:
     presentation = (
-        "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
-        f"<p:presentation xmlns:p=\"{P_NS}\" xmlns:r=\"{R_NS}\">"
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+        f'<p:presentation xmlns:p="{P_NS}" xmlns:r="{R_NS}">'
         "<p:sldIdLst>"
-        "<p:sldId id=\"256\" r:id=\"rId1\"/>"
-        "<p:sldId id=\"257\" r:id=\"rId2\"/>"
+        '<p:sldId id="256" r:id="rId1"/>'
+        '<p:sldId id="257" r:id="rId2"/>'
         "</p:sldIdLst>"
         "</p:presentation>"
     )
 
     rels = (
-        "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
-        "<Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">"
-        "<Relationship Id=\"rId1\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide\" "
-        "Target=\"slides/slide1.xml\"/>"
-        "<Relationship Id=\"rId2\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide\" "
-        "Target=\"slides/slide2.xml\"/>"
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+        '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+        '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide" '
+        'Target="slides/slide1.xml"/>'
+        '<Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide" '
+        'Target="slides/slide2.xml"/>'
         "</Relationships>"
     )
 
     slide_template = (
-        "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
-        f"<p:sld xmlns:p=\"{P_NS}\" xmlns:a=\"{A_NS}\">"
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+        f'<p:sld xmlns:p="{P_NS}" xmlns:a="{A_NS}">'
         "<p:cSld>"
         "<p:spTree>"
         "<p:sp>"
         "<p:spPr>"
-        "<a:solidFill><a:srgbClr val=\"{color}\"/></a:solidFill>"
+        '<a:solidFill><a:srgbClr val="{color}"/></a:solidFill>'
         "</p:spPr>"
         "</p:sp>"
         "</p:spTree>"

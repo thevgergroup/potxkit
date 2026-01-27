@@ -40,9 +40,7 @@ class ContentTypes:
         return ET.tostring(self._root, encoding="utf-8", xml_declaration=True)
 
 
-def ensure_override(
-    pkg: OOXMLPackage, part_name: str, content_type: str
-) -> bool:
+def ensure_override(pkg: OOXMLPackage, part_name: str, content_type: str) -> bool:
     if not pkg.has_part("[Content_Types].xml"):
         raise KeyError("[Content_Types].xml not found")
     ct = ContentTypes.from_bytes(pkg.read_part("[Content_Types].xml"))
@@ -87,7 +85,9 @@ def _normalize_part_name(part_name: str) -> str:
     return part_name if part_name.startswith("/") else f"/{part_name}"
 
 
-def _ensure_default_element(ct: ContentTypes, extension: str, content_type: str) -> bool:
+def _ensure_default_element(
+    ct: ContentTypes, extension: str, content_type: str
+) -> bool:
     ext = extension.lower().lstrip(".")
     for default in ct._root.findall(f"{{{CT_NS}}}Default"):
         if default.attrib.get("Extension") == ext:

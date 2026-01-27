@@ -31,8 +31,12 @@ R_NS = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
 
 NS = {"p": P_NS, "a": A_NS, "r": R_NS}
 
-SLIDE_LAYOUT_REL = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout"
-SLIDE_MASTER_REL = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"
+SLIDE_LAYOUT_REL = (
+    "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout"
+)
+SLIDE_MASTER_REL = (
+    "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"
+)
 IMAGE_REL = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"
 SLIDE_LAYOUT_CONTENT_TYPE = (
     "application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml"
@@ -61,7 +65,9 @@ def make_layout_from_slide(
     if slide_c_sld is None or layout_c_sld is None:
         raise ValueError("Slide or layout is missing cSld")
 
-    parent_map = {child: parent for parent in layout_root.iter() for child in list(parent)}
+    parent_map = {
+        child: parent for parent in layout_root.iter() for child in list(parent)
+    }
     layout_parent = parent_map.get(layout_c_sld)
     if layout_parent is None:
         raise ValueError("Failed to locate layout cSld parent")
@@ -72,7 +78,10 @@ def make_layout_from_slide(
     layout_root.set("name", name)
 
     new_layout_part = _next_layout_part(pkg)
-    pkg.write_part(new_layout_part, ET.tostring(layout_root, encoding="utf-8", xml_declaration=True))
+    pkg.write_part(
+        new_layout_part,
+        ET.tostring(layout_root, encoding="utf-8", xml_declaration=True),
+    )
 
     layout_rels = _layout_relationships_from_slide(
         pkg, slide_part, master_part, new_layout_part
@@ -131,7 +140,9 @@ def set_font_family_for_part(pkg: OOXMLPackage, part: str, font: str) -> int:
     return updated
 
 
-def set_layout_background_image(pkg: OOXMLPackage, layout_part: str, image_path: str) -> None:
+def set_layout_background_image(
+    pkg: OOXMLPackage, layout_part: str, image_path: str
+) -> None:
     image_part = add_image_part(pkg, image_path)
     target = _rel_target(layout_part, image_part)
     rel = ensure_relationship(pkg, layout_part, IMAGE_REL, target)
@@ -154,7 +165,9 @@ def set_layout_background_image(pkg: OOXMLPackage, layout_part: str, image_path:
     stretch = ET.SubElement(blip_fill, f"{{{A_NS}}}stretch")
     ET.SubElement(stretch, f"{{{A_NS}}}fillRect")
 
-    pkg.write_part(layout_part, ET.tostring(root, encoding="utf-8", xml_declaration=True))
+    pkg.write_part(
+        layout_part, ET.tostring(root, encoding="utf-8", xml_declaration=True)
+    )
 
 
 def add_layout_image_shape(
@@ -198,7 +211,9 @@ def add_layout_image_shape(
     prst = ET.SubElement(sp_pr, f"{{{A_NS}}}prstGeom", {"prst": "rect"})
     ET.SubElement(prst, f"{{{A_NS}}}avLst")
 
-    pkg.write_part(layout_part, ET.tostring(root, encoding="utf-8", xml_declaration=True))
+    pkg.write_part(
+        layout_part, ET.tostring(root, encoding="utf-8", xml_declaration=True)
+    )
 
 
 def set_layout_text_styles_for_part(
@@ -214,7 +229,9 @@ def set_layout_text_styles_for_part(
         root, title_size_pt, title_bold, body_size_pt, body_bold
     )
     if updated:
-        pkg.write_part(layout_part, ET.tostring(root, encoding="utf-8", xml_declaration=True))
+        pkg.write_part(
+            layout_part, ET.tostring(root, encoding="utf-8", xml_declaration=True)
+        )
     return updated
 
 
@@ -231,7 +248,9 @@ def set_master_text_styles_for_part(
         root, title_size_pt, title_bold, body_size_pt, body_bold
     )
     if updated:
-        pkg.write_part(master_part, ET.tostring(root, encoding="utf-8", xml_declaration=True))
+        pkg.write_part(
+            master_part, ET.tostring(root, encoding="utf-8", xml_declaration=True)
+        )
     return updated
 
 
@@ -281,20 +300,30 @@ def _set_slide_layout(pkg: OOXMLPackage, slide_part: str, layout_part: str) -> N
             break
     if not updated:
         relationships.append(
-            Relationship(id=_next_rid(relationships), type=SLIDE_LAYOUT_REL, target=target)
+            Relationship(
+                id=_next_rid(relationships), type=SLIDE_LAYOUT_REL, target=target
+            )
         )
     pkg.write_part(rels_part, serialize_relationships(relationships))
 
 
 def _layout_parts(pkg: OOXMLPackage) -> list[str]:
     return sorted(
-        [p for p in pkg.list_parts() if p.startswith("ppt/slideLayouts/") and p.endswith(".xml")]
+        [
+            p
+            for p in pkg.list_parts()
+            if p.startswith("ppt/slideLayouts/") and p.endswith(".xml")
+        ]
     )
 
 
 def _master_part_by_index(pkg: OOXMLPackage, index: int) -> str:
     masters = sorted(
-        [p for p in pkg.list_parts() if p.startswith("ppt/slideMasters/") and p.endswith(".xml")]
+        [
+            p
+            for p in pkg.list_parts()
+            if p.startswith("ppt/slideMasters/") and p.endswith(".xml")
+        ]
     )
     if not masters:
         raise ValueError("No slide master parts found")
@@ -326,7 +355,9 @@ def _layout_relationships_from_slide(
 
     master_target = _rel_target(layout_part, master_part)
     master_id = _next_rid(layout_rels)
-    layout_rels.append(Relationship(id=master_id, type=SLIDE_MASTER_REL, target=master_target))
+    layout_rels.append(
+        Relationship(id=master_id, type=SLIDE_MASTER_REL, target=master_target)
+    )
     return layout_rels
 
 
@@ -357,7 +388,9 @@ def _insert_layout_id(master_part: str, pkg: OOXMLPackage, rel_id: str) -> None:
     attrib = {"id": new_id, f"{{{R_NS}}}id": rel_id}
     ET.SubElement(layout_list, f"{{{P_NS}}}sldLayoutId", attrib)
 
-    pkg.write_part(master_part, ET.tostring(root, encoding="utf-8", xml_declaration=True))
+    pkg.write_part(
+        master_part, ET.tostring(root, encoding="utf-8", xml_declaration=True)
+    )
 
 
 def _next_layout_part(pkg: OOXMLPackage) -> str:
@@ -439,7 +472,9 @@ def prune_unused_layouts(
 
     layout_parts = _layout_parts(pkg)
     unused = [
-        layout for layout in layout_parts if layout not in used_layouts and layout not in keep
+        layout
+        for layout in layout_parts
+        if layout not in used_layouts and layout not in keep
     ]
 
     masters_updated = 0
@@ -459,14 +494,18 @@ def prune_unused_layouts(
 def reindex_layouts(pkg: OOXMLPackage) -> ReindexLayoutsResult:
     mapping = _build_layout_reindex_map(pkg)
     if not mapping:
-        return ReindexLayoutsResult(layout_mapping={}, masters_updated=0, slides_updated=0)
+        return ReindexLayoutsResult(
+            layout_mapping={}, masters_updated=0, slides_updated=0
+        )
 
     _rename_layout_parts(pkg, mapping)
     slides_updated = _update_slide_layout_relationships(pkg, mapping)
     masters_updated = _reindex_master_layouts(pkg, mapping)
 
     return ReindexLayoutsResult(
-        layout_mapping=mapping, masters_updated=masters_updated, slides_updated=slides_updated
+        layout_mapping=mapping,
+        masters_updated=masters_updated,
+        slides_updated=slides_updated,
     )
 
 
@@ -483,7 +522,9 @@ def _build_layout_reindex_map(pkg: OOXMLPackage) -> dict[str, str]:
         for idx, layout_part in enumerate(order, start=1):
             new_name = f"ppt/slideLayouts/slideLayout{idx}.xml"
             if layout_part in mapping and mapping[layout_part] != new_name:
-                raise ValueError(f"Layout {layout_part} already mapped to {mapping[layout_part]}")
+                raise ValueError(
+                    f"Layout {layout_part} already mapped to {mapping[layout_part]}"
+                )
             mapping[layout_part] = new_name
 
     return mapping
@@ -530,7 +571,9 @@ def _rename_layout_parts(pkg: OOXMLPackage, mapping: dict[str, str]) -> None:
         ensure_override(pkg, new, SLIDE_LAYOUT_CONTENT_TYPE)
 
 
-def _update_slide_layout_relationships(pkg: OOXMLPackage, mapping: dict[str, str]) -> int:
+def _update_slide_layout_relationships(
+    pkg: OOXMLPackage, mapping: dict[str, str]
+) -> int:
     updated = 0
     for slide_part in slide_parts_in_order(pkg):
         rels_part = rels_part_for(slide_part)
@@ -559,7 +602,11 @@ def _reindex_master_layouts(pkg: OOXMLPackage, mapping: dict[str, str]) -> int:
             continue
 
         rels_part = rels_part_for(master_part)
-        rels = parse_relationships(pkg.read_part(rels_part)) if pkg.has_part(rels_part) else []
+        rels = (
+            parse_relationships(pkg.read_part(rels_part))
+            if pkg.has_part(rels_part)
+            else []
+        )
         non_layout = [rel for rel in rels if not rel.type.endswith("/slideLayout")]
         used_ids = {rel.id for rel in non_layout}
 
@@ -587,7 +634,9 @@ def _reindex_master_layouts(pkg: OOXMLPackage, mapping: dict[str, str]) -> int:
                 layout_list.findall("p:sldLayoutId", NS), new_layout_rels
             ):
                 node.set(f"{{{R_NS}}}id", layout_rel.id)
-        pkg.write_part(master_part, ET.tostring(root, encoding="utf-8", xml_declaration=True))
+        pkg.write_part(
+            master_part, ET.tostring(root, encoding="utf-8", xml_declaration=True)
+        )
         updated += 1
     return updated
 
@@ -629,7 +678,11 @@ def _slide_layout_part(pkg: OOXMLPackage, slide_part: str) -> str | None:
 
 def _master_parts(pkg: OOXMLPackage) -> list[str]:
     return sorted(
-        [p for p in pkg.list_parts() if p.startswith("ppt/slideMasters/") and p.endswith(".xml")]
+        [
+            p
+            for p in pkg.list_parts()
+            if p.startswith("ppt/slideMasters/") and p.endswith(".xml")
+        ]
     )
 
 
@@ -662,6 +715,8 @@ def _remove_layout_from_masters(pkg: OOXMLPackage, layout_part: str) -> int:
                 rid = layout_id.attrib.get(f"{{{R_NS}}}id")
                 if rid in removed_ids:
                     layout_list.remove(layout_id)
-        pkg.write_part(master_part, ET.tostring(root, encoding="utf-8", xml_declaration=True))
+        pkg.write_part(
+            master_part, ET.tostring(root, encoding="utf-8", xml_declaration=True)
+        )
         updated += 1
     return updated

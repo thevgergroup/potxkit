@@ -8,3 +8,7 @@ if [[ -n "$blocked" ]]; then
   echo "Remove them from the commit (or move them out of the repo)."
   exit 1
 fi
+
+if command -v pre-commit >/dev/null 2>&1 && [[ -f .pre-commit-config.yaml ]]; then
+  pre-commit run --hook-stage pre-commit
+fi

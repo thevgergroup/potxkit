@@ -142,6 +142,12 @@ Prevent `.pptx`/`.potx` files from being committed (confidential assets):
 ./scripts/install-hooks.sh
 ```
 
+Install pre-commit checks (ruff, black, vulture):
+
+```bash
+pre-commit install
+```
+
 ## Terminology
 
 If you see `srgbClr`, `schemeClr`, or `sysClr` in audit outputs, these are OOXML color nodes. See the glossary in `docs/SDK.md` for quick definitions.

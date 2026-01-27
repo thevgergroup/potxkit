@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 import io
-import zipfile
 import xml.etree.ElementTree as ET
+import zipfile
 
 from potxkit.package import OOXMLPackage
 from potxkit.sanitize import sanitize_slides
@@ -10,9 +10,9 @@ from potxkit.sanitize import sanitize_slides
 
 def _build_slide_pkg() -> bytes:
     slide_xml = (
-        "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
-        "<p:sld xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" "
-        "xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\">"
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+        '<p:sld xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" '
+        'xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">'
         "<p:cSld>"
         "<p:bg><p:bgPr><a:effectLst/></p:bgPr></p:bg>"
         "<p:spTree>"
@@ -27,33 +27,33 @@ def _build_slide_pkg() -> bytes:
         "</p:sld>"
     )
     presentation_xml = (
-        "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
-        "<p:presentation xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" "
-        "xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\">"
-        "<p:sldIdLst><p:sldId id=\"256\" r:id=\"rId1\"/></p:sldIdLst>"
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+        '<p:presentation xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" '
+        'xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">'
+        '<p:sldIdLst><p:sldId id="256" r:id="rId1"/></p:sldIdLst>'
         "</p:presentation>"
     )
     presentation_rels = (
-        "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
-        "<Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">"
-        "<Relationship Id=\"rId1\" "
-        "Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide\" "
-        "Target=\"slides/slide1.xml\"/>"
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+        '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+        '<Relationship Id="rId1" '
+        'Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide" '
+        'Target="slides/slide1.xml"/>'
         "</Relationships>"
     )
     slide_rels = (
-        "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
-        "<Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\"/>"
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+        '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"/>'
     )
     content_types = (
-        "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
-        "<Types xmlns=\"http://schemas.openxmlformats.org/package/2006/content-types\">"
-        "<Default Extension=\"rels\" ContentType=\"application/vnd.openxmlformats-package.relationships+xml\"/>"
-        "<Default Extension=\"xml\" ContentType=\"application/xml\"/>"
-        "<Override PartName=\"/ppt/presentation.xml\" "
-        "ContentType=\"application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml\"/>"
-        "<Override PartName=\"/ppt/slides/slide1.xml\" "
-        "ContentType=\"application/vnd.openxmlformats-officedocument.presentationml.slide+xml\"/>"
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+        '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">'
+        '<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>'
+        '<Default Extension="xml" ContentType="application/xml"/>'
+        '<Override PartName="/ppt/presentation.xml" '
+        'ContentType="application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml"/>'
+        '<Override PartName="/ppt/slides/slide1.xml" '
+        'ContentType="application/vnd.openxmlformats-officedocument.presentationml.slide+xml"/>'
         "</Types>"
     )
 

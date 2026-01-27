@@ -43,9 +43,7 @@ def _validate_relationship_targets(pkg: OOXMLPackage, report: ValidationReport) 
             source_part = source_part_for(rels_part)
             target = _resolve_target(source_part, rel.target)
             if target and not pkg.has_part(target):
-                report.errors.append(
-                    f"Missing rel target: {rels_part} -> {rel.target}"
-                )
+                report.errors.append(f"Missing rel target: {rels_part} -> {rel.target}")
 
 
 def _resolve_target(source_part: str, target: str) -> str | None:

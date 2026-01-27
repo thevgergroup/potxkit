@@ -54,7 +54,9 @@ def sanitize_slides(
             changed = True
 
         if changed:
-            pkg.write_part(slide_part, ET.tostring(root, encoding="utf-8", xml_declaration=True))
+            pkg.write_part(
+                slide_part, ET.tostring(root, encoding="utf-8", xml_declaration=True)
+            )
             slides_updated += 1
 
     return SanitizeResult(

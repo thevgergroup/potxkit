@@ -7,14 +7,14 @@ from typing import Any
 from fastmcp import FastMCP
 
 from .audit import audit_package
-from .dump_tree import DumpTreeOptions, dump_tree as _dump_tree, summarize_tree
+from .dump_tree import DumpTreeOptions, summarize_tree
+from .dump_tree import dump_tree as _dump_tree
 from .layout_ops import (
     add_layout_image_shape,
     apply_palette_to_part,
     assign_slides_to_layout,
     make_layout_from_slide,
     prune_unused_layouts,
-    reindex_layouts as _reindex_layouts,
     resolve_layout_part,
     resolve_master_part,
     set_font_family_for_part,
@@ -25,13 +25,15 @@ from .layout_ops import (
     strip_colors_from_part,
     strip_fonts_from_part,
 )
+from .layout_ops import (
+    reindex_layouts as _reindex_layouts,
+)
 from .normalize import normalize_slide_colors, parse_slide_numbers
 from .package import OOXMLPackage
 from .sanitize import sanitize_slides
 from .slide_index import slide_parts_in_order
 from .storage import read_bytes, write_bytes
 from .template import PotxTemplate
-
 
 mcp = FastMCP("potxkit")
 
@@ -71,7 +73,11 @@ def info(path: str) -> dict[str, Any]:
             "major": major.latin if major else None,
             "minor": minor.latin if minor else None,
         },
-        "validation": {"ok": report.ok, "errors": report.errors, "warnings": report.warnings},
+        "validation": {
+            "ok": report.ok,
+            "errors": report.errors,
+            "warnings": report.warnings,
+        },
     }
 
 
@@ -99,7 +105,9 @@ def dump_theme(path: str, pretty: bool = False) -> str:
 
 
 @mcp.tool()
-def audit(path: str, slides: str | None = None, group_by: str = "p,l") -> dict[str, Any]:
+def audit(
+    path: str, slides: str | None = None, group_by: str = "p,l"
+) -> dict[str, Any]:
     """Audit slides for hard-coded colors, overrides, images, and backgrounds."""
     pkg = _load_pkg(path)
     slide_numbers = parse_slide_numbers(slides) if slides else None
@@ -344,10 +352,14 @@ def set_text_styles(
     pkg = _load_pkg(input_path)
     if layout:
         layout_part = resolve_layout_part(pkg, layout)
-        set_layout_text_styles_for_part(pkg, layout_part, title_size, title_bold, body_size, body_bold)
+        set_layout_text_styles_for_part(
+            pkg, layout_part, title_size, title_bold, body_size, body_bold
+        )
     if master:
         master_part = resolve_master_part(pkg, master)
-        set_master_text_styles_for_part(pkg, master_part, title_size, title_bold, body_size, body_bold)
+        set_master_text_styles_for_part(
+            pkg, master_part, title_size, title_bold, body_size, body_bold
+        )
     _save_pkg(pkg, output)
     return output
 

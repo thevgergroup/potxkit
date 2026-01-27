@@ -154,14 +154,12 @@ def _background_flags(root: ET.Element) -> dict[str, bool]:
 
 def _top_srgb(root: ET.Element, limit: int = 5) -> list[dict[str, int]]:
     values = [
-        node.attrib.get("val", "").upper()
-        for node in root.findall(".//a:srgbClr", NS)
+        node.attrib.get("val", "").upper() for node in root.findall(".//a:srgbClr", NS)
     ]
     values = [val for val in values if val]
     counter = Counter(values)
     return [
-        {"value": color, "count": count}
-        for color, count in counter.most_common(limit)
+        {"value": color, "count": count} for color, count in counter.most_common(limit)
     ]
 
 
@@ -302,13 +300,21 @@ def _theme_summary(pkg: OOXMLPackage) -> dict[str, str] | None:
     theme_part = sorted(non_override or theme_parts)[0]
     root = ET.fromstring(pkg.read_part(theme_part))
     theme_elements = root.find("a:themeElements", NS)
-    clr_scheme = theme_elements.find("a:clrScheme", NS) if theme_elements is not None else None
-    font_scheme = theme_elements.find("a:fontScheme", NS) if theme_elements is not None else None
+    clr_scheme = (
+        theme_elements.find("a:clrScheme", NS) if theme_elements is not None else None
+    )
+    font_scheme = (
+        theme_elements.find("a:fontScheme", NS) if theme_elements is not None else None
+    )
     return {
         "part": theme_part,
         "theme_name": root.attrib.get("name", ""),
-        "color_scheme_name": clr_scheme.attrib.get("name", "") if clr_scheme is not None else "",
-        "font_scheme_name": font_scheme.attrib.get("name", "") if font_scheme is not None else "",
+        "color_scheme_name": (
+            clr_scheme.attrib.get("name", "") if clr_scheme is not None else ""
+        ),
+        "font_scheme_name": (
+            font_scheme.attrib.get("name", "") if font_scheme is not None else ""
+        ),
     }
 
 

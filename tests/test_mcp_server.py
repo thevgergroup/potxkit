@@ -1,15 +1,14 @@
 from __future__ import annotations
 
 import json
+from contextlib import asynccontextmanager
 from pathlib import Path
 
+import conftest
 import pytest
-from contextlib import asynccontextmanager
 from fastmcp import Client
 
 from potxkit.mcp_server import mcp
-
-import conftest
 
 
 def _tool_names(tools) -> set[str]:

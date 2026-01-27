@@ -36,7 +36,11 @@ def slide_parts_in_order(pkg: OOXMLPackage) -> list[str]:
 
 def _fallback_slide_parts(pkg: OOXMLPackage) -> list[str]:
     return sorted(
-        [p for p in pkg.list_parts() if p.startswith("ppt/slides/slide") and p.endswith(".xml")]
+        [
+            p
+            for p in pkg.list_parts()
+            if p.startswith("ppt/slides/slide") and p.endswith(".xml")
+        ]
     )
 
 

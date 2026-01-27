@@ -2,10 +2,10 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from conftest import build_minimal_potx
+
 from potxkit import PotxTemplate
 from potxkit.rels import parse_relationships
-
-from conftest import build_minimal_potx
 
 
 def test_theme_edit_roundtrip(tmp_path: Path) -> None:

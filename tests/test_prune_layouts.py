@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 import io
-import zipfile
 import xml.etree.ElementTree as ET
+import zipfile
 
 from potxkit.layout_ops import prune_unused_layouts
 from potxkit.package import OOXMLPackage
@@ -11,78 +11,78 @@ from potxkit.rels import parse_relationships
 
 def _build_minimal_deck() -> bytes:
     presentation_xml = (
-        "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
-        "<p:presentation xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" "
-        "xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\">"
-        "<p:sldIdLst><p:sldId id=\"256\" r:id=\"rId1\"/></p:sldIdLst>"
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+        '<p:presentation xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" '
+        'xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">'
+        '<p:sldIdLst><p:sldId id="256" r:id="rId1"/></p:sldIdLst>'
         "</p:presentation>"
     )
     presentation_rels = (
-        "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
-        "<Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">"
-        "<Relationship Id=\"rId1\" "
-        "Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide\" "
-        "Target=\"slides/slide1.xml\"/>"
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+        '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+        '<Relationship Id="rId1" '
+        'Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide" '
+        'Target="slides/slide1.xml"/>'
         "</Relationships>"
     )
     slide_xml = (
-        "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
-        "<p:sld xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" "
-        "xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\">"
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+        '<p:sld xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" '
+        'xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">'
         "<p:cSld><p:spTree/></p:cSld>"
         "</p:sld>"
     )
     slide_rels = (
-        "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
-        "<Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">"
-        "<Relationship Id=\"rId1\" "
-        "Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout\" "
-        "Target=\"../slideLayouts/slideLayout1.xml\"/>"
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+        '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+        '<Relationship Id="rId1" '
+        'Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout" '
+        'Target="../slideLayouts/slideLayout1.xml"/>'
         "</Relationships>"
     )
     master_xml = (
-        "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
-        "<p:sldMaster xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" "
-        "xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\">"
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+        '<p:sldMaster xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" '
+        'xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">'
         "<p:sldLayoutIdLst>"
-        "<p:sldLayoutId id=\"256\" r:id=\"rId1\"/>"
-        "<p:sldLayoutId id=\"257\" r:id=\"rId2\"/>"
+        '<p:sldLayoutId id="256" r:id="rId1"/>'
+        '<p:sldLayoutId id="257" r:id="rId2"/>'
         "</p:sldLayoutIdLst>"
         "</p:sldMaster>"
     )
     master_rels = (
-        "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
-        "<Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">"
-        "<Relationship Id=\"rId1\" "
-        "Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout\" "
-        "Target=\"../slideLayouts/slideLayout1.xml\"/>"
-        "<Relationship Id=\"rId2\" "
-        "Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout\" "
-        "Target=\"../slideLayouts/slideLayout2.xml\"/>"
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+        '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+        '<Relationship Id="rId1" '
+        'Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout" '
+        'Target="../slideLayouts/slideLayout1.xml"/>'
+        '<Relationship Id="rId2" '
+        'Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout" '
+        'Target="../slideLayouts/slideLayout2.xml"/>'
         "</Relationships>"
     )
     layout_xml = (
-        "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
-        "<p:sldLayout xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" "
-        "xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\">"
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+        '<p:sldLayout xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" '
+        'xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">'
         "<p:cSld><p:spTree/></p:cSld>"
         "</p:sldLayout>"
     )
     content_types = (
-        "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
-        "<Types xmlns=\"http://schemas.openxmlformats.org/package/2006/content-types\">"
-        "<Default Extension=\"rels\" ContentType=\"application/vnd.openxmlformats-package.relationships+xml\"/>"
-        "<Default Extension=\"xml\" ContentType=\"application/xml\"/>"
-        "<Override PartName=\"/ppt/presentation.xml\" "
-        "ContentType=\"application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml\"/>"
-        "<Override PartName=\"/ppt/slides/slide1.xml\" "
-        "ContentType=\"application/vnd.openxmlformats-officedocument.presentationml.slide+xml\"/>"
-        "<Override PartName=\"/ppt/slideMasters/slideMaster1.xml\" "
-        "ContentType=\"application/vnd.openxmlformats-officedocument.presentationml.slideMaster+xml\"/>"
-        "<Override PartName=\"/ppt/slideLayouts/slideLayout1.xml\" "
-        "ContentType=\"application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml\"/>"
-        "<Override PartName=\"/ppt/slideLayouts/slideLayout2.xml\" "
-        "ContentType=\"application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml\"/>"
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+        '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">'
+        '<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>'
+        '<Default Extension="xml" ContentType="application/xml"/>'
+        '<Override PartName="/ppt/presentation.xml" '
+        'ContentType="application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml"/>'
+        '<Override PartName="/ppt/slides/slide1.xml" '
+        'ContentType="application/vnd.openxmlformats-officedocument.presentationml.slide+xml"/>'
+        '<Override PartName="/ppt/slideMasters/slideMaster1.xml" '
+        'ContentType="application/vnd.openxmlformats-officedocument.presentationml.slideMaster+xml"/>'
+        '<Override PartName="/ppt/slideLayouts/slideLayout1.xml" '
+        'ContentType="application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml"/>'
+        '<Override PartName="/ppt/slideLayouts/slideLayout2.xml" '
+        'ContentType="application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml"/>'
         "</Types>"
     )
 

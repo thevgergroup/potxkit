@@ -3,8 +3,8 @@ from __future__ import annotations
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 
-from .package import OOXMLPackage
 from .formatting import apply_color_mapping, normalize_mapping
+from .package import OOXMLPackage
 from .slide_index import slide_parts_in_order
 
 SCHEME_SYNONYMS = {
@@ -41,7 +41,9 @@ def normalize_slide_colors(
         root = ET.fromstring(pkg.read_part(slide_part))
         replacements = apply_color_mapping(root, normalized_mapping)
         if replacements:
-            pkg.write_part(slide_part, ET.tostring(root, encoding="utf-8", xml_declaration=True))
+            pkg.write_part(
+                slide_part, ET.tostring(root, encoding="utf-8", xml_declaration=True)
+            )
             total_replacements += replacements
             per_slide[idx] = replacements
             touched += 1

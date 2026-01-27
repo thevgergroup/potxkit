@@ -194,7 +194,10 @@ def _extract_sp(node: ET.Element, *, include_text: bool) -> dict[str, Any]:
     info = _shape_identity(c_nv_pr)
     ph = node.find("p:nvSpPr/p:nvPr/p:ph", NS)
     if ph is not None:
-        info["placeholder"] = {"type": ph.attrib.get("type"), "idx": ph.attrib.get("idx")}
+        info["placeholder"] = {
+            "type": ph.attrib.get("type"),
+            "idx": ph.attrib.get("idx"),
+        }
     sp_pr = node.find("p:spPr", NS)
     if sp_pr is not None:
         fill = _extract_fill(sp_pr)
@@ -236,7 +239,10 @@ def _extract_group(node: ET.Element, *, include_text: bool) -> dict[str, Any]:
     children_tree = node.find("p:grpSp/p:spTree", NS)
     children = []
     if children_tree is not None:
-        children = [_extract_shape(child, include_text=include_text) for child in list(children_tree)]
+        children = [
+            _extract_shape(child, include_text=include_text)
+            for child in list(children_tree)
+        ]
     return {"type": "group", **info, "children": children}
 
 

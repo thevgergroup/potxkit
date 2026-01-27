@@ -2,7 +2,11 @@ from __future__ import annotations
 
 import xml.etree.ElementTree as ET
 
-from potxkit.typography import detect_placeholder_styles, set_layout_text_styles, set_master_text_styles
+from potxkit.typography import (
+    detect_placeholder_styles,
+    set_layout_text_styles,
+    set_master_text_styles,
+)
 
 P_NS = "http://schemas.openxmlformats.org/presentationml/2006/main"
 A_NS = "http://schemas.openxmlformats.org/drawingml/2006/main"
@@ -10,10 +14,10 @@ A_NS = "http://schemas.openxmlformats.org/drawingml/2006/main"
 
 def test_detect_placeholder_styles() -> None:
     xml = (
-        f"<p:sld xmlns:p=\"{P_NS}\" xmlns:a=\"{A_NS}\">"
+        f'<p:sld xmlns:p="{P_NS}" xmlns:a="{A_NS}">'
         "<p:cSld><p:spTree>"
-        "<p:sp><p:nvSpPr><p:nvPr><p:ph type=\"title\"/></p:nvPr></p:nvSpPr>"
-        "<p:txBody><a:p><a:r><a:rPr sz=\"3000\" b=\"1\"/></a:r></a:p></p:txBody>"
+        '<p:sp><p:nvSpPr><p:nvPr><p:ph type="title"/></p:nvPr></p:nvSpPr>'
+        '<p:txBody><a:p><a:r><a:rPr sz="3000" b="1"/></a:r></a:p></p:txBody>'
         "</p:sp>"
         "</p:spTree></p:cSld></p:sld>"
     )
@@ -25,9 +29,9 @@ def test_detect_placeholder_styles() -> None:
 
 def test_set_layout_text_styles() -> None:
     xml = (
-        f"<p:sldLayout xmlns:p=\"{P_NS}\" xmlns:a=\"{A_NS}\">"
+        f'<p:sldLayout xmlns:p="{P_NS}" xmlns:a="{A_NS}">'
         "<p:cSld><p:spTree>"
-        "<p:sp><p:nvSpPr><p:nvPr><p:ph type=\"title\"/></p:nvPr></p:nvSpPr>"
+        '<p:sp><p:nvSpPr><p:nvPr><p:ph type="title"/></p:nvPr></p:nvSpPr>'
         "<p:txBody><a:bodyPr/><a:lstStyle/></p:txBody></p:sp>"
         "</p:spTree></p:cSld></p:sldLayout>"
     )
@@ -41,7 +45,7 @@ def test_set_layout_text_styles() -> None:
 
 def test_set_master_text_styles() -> None:
     xml = (
-        f"<p:sldMaster xmlns:p=\"{P_NS}\" xmlns:a=\"{A_NS}\">"
+        f'<p:sldMaster xmlns:p="{P_NS}" xmlns:a="{A_NS}">'
         "<p:txStyles><p:titleStyle><a:lvl1pPr/></p:titleStyle></p:txStyles>"
         "</p:sldMaster>"
     )

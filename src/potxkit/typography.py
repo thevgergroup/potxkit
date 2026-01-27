@@ -42,7 +42,11 @@ def detect_placeholder_styles(root: ET.Element) -> dict[str, dict[str, Any]]:
         if ph is None:
             continue
         ph_type = ph.attrib.get("type", "body")
-        category = "title" if ph_type in TITLE_TYPES else "body" if ph_type in BODY_TYPES else None
+        category = (
+            "title"
+            if ph_type in TITLE_TYPES
+            else "body" if ph_type in BODY_TYPES else None
+        )
         if category is None:
             continue
         sizes = []
@@ -107,7 +111,9 @@ def set_master_text_styles(
     return updated
 
 
-def _apply_shape_style(shape: ET.Element, size_pt: float | None, bold: bool | None) -> int:
+def _apply_shape_style(
+    shape: ET.Element, size_pt: float | None, bold: bool | None
+) -> int:
     if size_pt is None and bold is None:
         return 0
     lst_style = shape.find(".//a:lstStyle", NS)
@@ -125,7 +131,9 @@ def _apply_shape_style(shape: ET.Element, size_pt: float | None, bold: bool | No
     return _set_rpr(def_rpr, size_pt, bold)
 
 
-def _apply_level_style(container: ET.Element, size_pt: float | None, bold: bool | None) -> int:
+def _apply_level_style(
+    container: ET.Element, size_pt: float | None, bold: bool | None
+) -> int:
     lvl = container.find("a:lvl1pPr", NS)
     if lvl is None:
         lvl = ET.SubElement(container, f"{{{A_NS}}}lvl1pPr")
