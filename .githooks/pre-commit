@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+blocked=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(pptx|potx)$' || true)
+if [[ -n "$blocked" ]]; then
+  echo "ERROR: PowerPoint files are not allowed in git:"
+  echo "$blocked"
+  echo "Remove them from the commit (or move them out of the repo)."
+  exit 1
+fi

@@ -1,0 +1,31 @@
+[project]
+name = "potxkit"
+version = "0.1.0"
+description = "POTX theme editor"
+authors = [
+    {name = "patrick o'leary",email = "pjaol@pjaol.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fsspec>=2024.2.0",
+]
+
+[project.scripts]
+potxkit = "potxkit.cli:main"
+
+[tool.poetry]
+packages = [{include = "potxkit", from = "src"}]
+include = ["src/potxkit/data/base.potx"]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.0"
+python-pptx = "^0.6.23"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

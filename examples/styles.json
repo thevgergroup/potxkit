@@ -1,0 +1,10 @@
+{
+  "title": {
+    "size": 30,
+    "bold": true
+  },
+  "body": {
+    "size": 20,
+    "bold": false
+  }
+}

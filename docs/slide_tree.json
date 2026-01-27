@@ -1,0 +1,5514 @@
+{
+  "slides": [
+    {
+      "slide": 1,
+      "part": "ppt/slides/slide1.xml",
+      "layout": "ppt/slideLayouts/slideLayout1.xml",
+      "master": "ppt/slideMasters/slideMaster1.xml",
+      "background": {
+        "fill": {
+          "type": "solid",
+          "color": {
+            "kind": "srgbClr",
+            "value": "F3F0DF"
+          }
+        }
+      },
+      "shapes": [
+        {
+          "type": "nvGrpSpPr"
+        },
+        {
+          "type": "grpSpPr"
+        },
+        {
+          "type": "shape",
+          "id": "2",
+          "name": "Title 1",
+          "placeholder": {
+            "type": "ctrTitle",
+            "idx": null
+          },
+          "text": {
+            "paragraphs": 1,
+            "runs": 1,
+            "colors": [
+              {
+                "kind": "srgbClr",
+                "value": "1C1916"
+              }
+            ],
+            "fonts": [
+              {
+                "value": "Georgia",
+                "count": 1
+              }
+            ],
+            "sizes_pt": [
+              {
+                "value": 60.0,
+                "count": 2
+              }
+            ],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "shape",
+          "id": "3",
+          "name": "Subtitle 2",
+          "placeholder": {
+            "type": "subTitle",
+            "idx": "1"
+          },
+          "text": {
+            "paragraphs": 2,
+            "runs": 2,
+            "colors": [
+              {
+                "kind": "srgbClr",
+                "value": "3C83F5"
+              },
+              {
+                "kind": "srgbClr",
+                "value": "3C83F5"
+              }
+            ],
+            "fonts": [],
+            "sizes_pt": [
+              {
+                "value": 24.0,
+                "count": 4
+              }
+            ],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "picture",
+          "id": "4",
+          "name": "code janitor",
+          "embed": "rId2"
+        },
+        {
+          "type": "shape",
+          "id": "21",
+          "name": "white stroke",
+          "fill": {
+            "type": "solid",
+            "color": {
+              "kind": "srgbClr",
+              "value": "FFFFFF"
+            }
+          },
+          "text": {
+            "paragraphs": 1,
+            "runs": 0,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        }
+      ],
+      "has_clrMapOvr": true,
+      "layout_tree": {
+        "part": "ppt/slideLayouts/slideLayout1.xml",
+        "name": "slideLayout1.xml",
+        "background": null,
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "9",
+            "name": "Google Shape;9;p2",
+            "placeholder": {
+              "type": "ctrTitle",
+              "idx": null
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 69.33,
+                  "count": 8
+                },
+                {
+                  "value": 86.66,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "10",
+            "name": "Google Shape;10;p2",
+            "placeholder": {
+              "type": "subTitle",
+              "idx": "1"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 0,
+              "colors": [],
+              "fonts": [],
+              "sizes_pt": [
+                {
+                  "value": 21.33,
+                  "count": 1
+                },
+                {
+                  "value": 37.33,
+                  "count": 8
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          }
+        ],
+        "has_clrMap": false,
+        "has_clrMapOvr": true
+      },
+      "master_tree": {
+        "part": "ppt/slideMasters/slideMaster1.xml",
+        "name": "slideMaster1.xml",
+        "background": {
+          "fill": {
+            "type": "solid",
+            "color": {
+              "kind": "schemeClr",
+              "value": "lt1"
+            }
+          }
+        },
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "6",
+            "name": "Google Shape;6;p1",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Vidaloka",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 30.0,
+                  "count": 9
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "7",
+            "name": "Google Shape;7;p1",
+            "placeholder": {
+              "type": "body",
+              "idx": "1"
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 2,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 9
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 18.0,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          }
+        ],
+        "has_clrMap": true,
+        "has_clrMapOvr": false
+      }
+    },
+    {
+      "slide": 2,
+      "part": "ppt/slides/slide2.xml",
+      "layout": "ppt/slideLayouts/slideLayout7.xml",
+      "master": "ppt/slideMasters/slideMaster1.xml",
+      "background": null,
+      "shapes": [
+        {
+          "type": "nvGrpSpPr"
+        },
+        {
+          "type": "grpSpPr"
+        },
+        {
+          "type": "shape",
+          "id": "5",
+          "name": "Title 4",
+          "placeholder": {
+            "type": "title",
+            "idx": null
+          },
+          "text": {
+            "paragraphs": 1,
+            "runs": 1,
+            "colors": [],
+            "fonts": [
+              {
+                "value": "Montserrat",
+                "count": 1
+              }
+            ],
+            "sizes_pt": [
+              {
+                "value": 30.0,
+                "count": 1
+              }
+            ],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "picture",
+          "id": "7",
+          "name": "Picture 6",
+          "embed": "rId3"
+        },
+        {
+          "type": "shape",
+          "id": "8",
+          "name": "TextBox 7",
+          "fill": {
+            "type": "none"
+          },
+          "text": {
+            "paragraphs": 1,
+            "runs": 1,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        }
+      ],
+      "has_clrMapOvr": true,
+      "layout_tree": {
+        "part": "ppt/slideLayouts/slideLayout7.xml",
+        "name": "slideLayout7.xml",
+        "background": null,
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "49",
+            "name": "Google Shape;49;p8",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 0,
+              "colors": [],
+              "fonts": [],
+              "sizes_pt": [
+                {
+                  "value": 64.0,
+                  "count": 8
+                },
+                {
+                  "value": 128.0,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          }
+        ],
+        "has_clrMap": false,
+        "has_clrMapOvr": true
+      },
+      "master_tree": {
+        "part": "ppt/slideMasters/slideMaster1.xml",
+        "name": "slideMaster1.xml",
+        "background": {
+          "fill": {
+            "type": "solid",
+            "color": {
+              "kind": "schemeClr",
+              "value": "lt1"
+            }
+          }
+        },
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "6",
+            "name": "Google Shape;6;p1",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Vidaloka",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 30.0,
+                  "count": 9
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "7",
+            "name": "Google Shape;7;p1",
+            "placeholder": {
+              "type": "body",
+              "idx": "1"
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 2,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 9
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 18.0,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          }
+        ],
+        "has_clrMap": true,
+        "has_clrMapOvr": false
+      }
+    },
+    {
+      "slide": 3,
+      "part": "ppt/slides/slide3.xml",
+      "layout": "ppt/slideLayouts/slideLayout17.xml",
+      "master": "ppt/slideMasters/slideMaster1.xml",
+      "background": null,
+      "shapes": [
+        {
+          "type": "nvGrpSpPr"
+        },
+        {
+          "type": "grpSpPr"
+        },
+        {
+          "type": "shape",
+          "id": "2",
+          "name": "Subtitle 1",
+          "placeholder": {
+            "type": "subTitle",
+            "idx": "1"
+          },
+          "text": {
+            "paragraphs": 9,
+            "runs": 12,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "shape",
+          "id": "3",
+          "name": "Title 2",
+          "placeholder": {
+            "type": "title",
+            "idx": null
+          },
+          "text": {
+            "paragraphs": 1,
+            "runs": 1,
+            "colors": [],
+            "fonts": [
+              {
+                "value": "Montserrat",
+                "count": 1
+              }
+            ],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "picture",
+          "id": "5",
+          "name": "Picture 4",
+          "embed": "rId2"
+        },
+        {
+          "type": "shape",
+          "id": "6",
+          "name": "TextBox 5",
+          "fill": {
+            "type": "none"
+          },
+          "text": {
+            "paragraphs": 3,
+            "runs": 3,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        }
+      ],
+      "has_clrMapOvr": true,
+      "layout_tree": {
+        "part": "ppt/slideLayouts/slideLayout17.xml",
+        "name": "slideLayout17.xml",
+        "background": null,
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "133",
+            "name": "Google Shape;133;p18",
+            "placeholder": {
+              "type": "subTitle",
+              "idx": "1"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "accent1"
+                }
+              ],
+              "fonts": [],
+              "sizes_pt": [
+                {
+                  "value": 18.67,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "134",
+            "name": "Google Shape;134;p18",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          }
+        ],
+        "has_clrMap": false,
+        "has_clrMapOvr": true
+      },
+      "master_tree": {
+        "part": "ppt/slideMasters/slideMaster1.xml",
+        "name": "slideMaster1.xml",
+        "background": {
+          "fill": {
+            "type": "solid",
+            "color": {
+              "kind": "schemeClr",
+              "value": "lt1"
+            }
+          }
+        },
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "6",
+            "name": "Google Shape;6;p1",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Vidaloka",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 30.0,
+                  "count": 9
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "7",
+            "name": "Google Shape;7;p1",
+            "placeholder": {
+              "type": "body",
+              "idx": "1"
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 2,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 9
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 18.0,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          }
+        ],
+        "has_clrMap": true,
+        "has_clrMapOvr": false
+      }
+    },
+    {
+      "slide": 4,
+      "part": "ppt/slides/slide4.xml",
+      "layout": "ppt/slideLayouts/slideLayout17.xml",
+      "master": "ppt/slideMasters/slideMaster1.xml",
+      "background": null,
+      "shapes": [
+        {
+          "type": "nvGrpSpPr"
+        },
+        {
+          "type": "grpSpPr"
+        },
+        {
+          "type": "shape",
+          "id": "2",
+          "name": "Subtitle 1",
+          "placeholder": {
+            "type": "subTitle",
+            "idx": "1"
+          },
+          "text": {
+            "paragraphs": 8,
+            "runs": 7,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "shape",
+          "id": "3",
+          "name": "Title 2",
+          "placeholder": {
+            "type": "title",
+            "idx": null
+          },
+          "text": {
+            "paragraphs": 1,
+            "runs": 1,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "picture",
+          "id": "5",
+          "name": "Picture 4",
+          "embed": "rId2"
+        }
+      ],
+      "has_clrMapOvr": true,
+      "layout_tree": {
+        "part": "ppt/slideLayouts/slideLayout17.xml",
+        "name": "slideLayout17.xml",
+        "background": null,
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "133",
+            "name": "Google Shape;133;p18",
+            "placeholder": {
+              "type": "subTitle",
+              "idx": "1"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "accent1"
+                }
+              ],
+              "fonts": [],
+              "sizes_pt": [
+                {
+                  "value": 18.67,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "134",
+            "name": "Google Shape;134;p18",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          }
+        ],
+        "has_clrMap": false,
+        "has_clrMapOvr": true
+      },
+      "master_tree": {
+        "part": "ppt/slideMasters/slideMaster1.xml",
+        "name": "slideMaster1.xml",
+        "background": {
+          "fill": {
+            "type": "solid",
+            "color": {
+              "kind": "schemeClr",
+              "value": "lt1"
+            }
+          }
+        },
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "6",
+            "name": "Google Shape;6;p1",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Vidaloka",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 30.0,
+                  "count": 9
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "7",
+            "name": "Google Shape;7;p1",
+            "placeholder": {
+              "type": "body",
+              "idx": "1"
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 2,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 9
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 18.0,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          }
+        ],
+        "has_clrMap": true,
+        "has_clrMapOvr": false
+      }
+    },
+    {
+      "slide": 5,
+      "part": "ppt/slides/slide5.xml",
+      "layout": "ppt/slideLayouts/slideLayout26.xml",
+      "master": "ppt/slideMasters/slideMaster1.xml",
+      "background": null,
+      "shapes": [
+        {
+          "type": "nvGrpSpPr"
+        },
+        {
+          "type": "grpSpPr"
+        },
+        {
+          "type": "shape",
+          "id": "2",
+          "name": "Title 1",
+          "placeholder": {
+            "type": "title",
+            "idx": null
+          },
+          "text": {
+            "paragraphs": 1,
+            "runs": 1,
+            "colors": [],
+            "fonts": [
+              {
+                "value": "Montserrat",
+                "count": 1
+              }
+            ],
+            "sizes_pt": [
+              {
+                "value": 30.0,
+                "count": 1
+              }
+            ],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "shape",
+          "id": "4",
+          "name": "Subtitle 3",
+          "placeholder": {
+            "type": "subTitle",
+            "idx": "1"
+          },
+          "text": {
+            "paragraphs": 13,
+            "runs": 11,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "picture",
+          "id": "6",
+          "name": "Picture 5",
+          "embed": "rId2"
+        }
+      ],
+      "has_clrMapOvr": true,
+      "layout_tree": {
+        "part": "ppt/slideLayouts/slideLayout26.xml",
+        "name": "slideLayout26.xml",
+        "background": null,
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "199",
+            "name": "Google Shape;199;p27",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 0,
+              "colors": [],
+              "fonts": [],
+              "sizes_pt": [
+                {
+                  "value": 46.67,
+                  "count": 1
+                },
+                {
+                  "value": 48.0,
+                  "count": 8
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "200",
+            "name": "Google Shape;200;p27",
+            "placeholder": {
+              "type": "title",
+              "idx": "2"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "accent1"
+                }
+              ],
+              "fonts": [],
+              "sizes_pt": [
+                {
+                  "value": 80.0,
+                  "count": 8
+                },
+                {
+                  "value": 93.33,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "201",
+            "name": "Google Shape;201;p27",
+            "placeholder": {
+              "type": "subTitle",
+              "idx": "1"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 0,
+              "colors": [],
+              "fonts": [],
+              "sizes_pt": [
+                {
+                  "value": 18.67,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          }
+        ],
+        "has_clrMap": false,
+        "has_clrMapOvr": true
+      },
+      "master_tree": {
+        "part": "ppt/slideMasters/slideMaster1.xml",
+        "name": "slideMaster1.xml",
+        "background": {
+          "fill": {
+            "type": "solid",
+            "color": {
+              "kind": "schemeClr",
+              "value": "lt1"
+            }
+          }
+        },
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "6",
+            "name": "Google Shape;6;p1",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Vidaloka",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 30.0,
+                  "count": 9
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "7",
+            "name": "Google Shape;7;p1",
+            "placeholder": {
+              "type": "body",
+              "idx": "1"
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 2,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 9
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 18.0,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          }
+        ],
+        "has_clrMap": true,
+        "has_clrMapOvr": false
+      }
+    },
+    {
+      "slide": 6,
+      "part": "ppt/slides/slide6.xml",
+      "layout": "ppt/slideLayouts/slideLayout17.xml",
+      "master": "ppt/slideMasters/slideMaster1.xml",
+      "background": null,
+      "shapes": [
+        {
+          "type": "nvGrpSpPr"
+        },
+        {
+          "type": "grpSpPr"
+        },
+        {
+          "type": "shape",
+          "id": "2",
+          "name": "Subtitle 1",
+          "placeholder": {
+            "type": "subTitle",
+            "idx": "1"
+          },
+          "text": {
+            "paragraphs": 10,
+            "runs": 10,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "shape",
+          "id": "3",
+          "name": "Title 2",
+          "placeholder": {
+            "type": "title",
+            "idx": null
+          },
+          "text": {
+            "paragraphs": 1,
+            "runs": 1,
+            "colors": [],
+            "fonts": [
+              {
+                "value": "Montserrat",
+                "count": 1
+              }
+            ],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "picture",
+          "id": "5",
+          "name": "Picture 4",
+          "embed": "rId2"
+        }
+      ],
+      "has_clrMapOvr": true,
+      "layout_tree": {
+        "part": "ppt/slideLayouts/slideLayout17.xml",
+        "name": "slideLayout17.xml",
+        "background": null,
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "133",
+            "name": "Google Shape;133;p18",
+            "placeholder": {
+              "type": "subTitle",
+              "idx": "1"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "accent1"
+                }
+              ],
+              "fonts": [],
+              "sizes_pt": [
+                {
+                  "value": 18.67,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "134",
+            "name": "Google Shape;134;p18",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          }
+        ],
+        "has_clrMap": false,
+        "has_clrMapOvr": true
+      },
+      "master_tree": {
+        "part": "ppt/slideMasters/slideMaster1.xml",
+        "name": "slideMaster1.xml",
+        "background": {
+          "fill": {
+            "type": "solid",
+            "color": {
+              "kind": "schemeClr",
+              "value": "lt1"
+            }
+          }
+        },
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "6",
+            "name": "Google Shape;6;p1",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Vidaloka",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 30.0,
+                  "count": 9
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "7",
+            "name": "Google Shape;7;p1",
+            "placeholder": {
+              "type": "body",
+              "idx": "1"
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 2,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 9
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 18.0,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          }
+        ],
+        "has_clrMap": true,
+        "has_clrMapOvr": false
+      }
+    },
+    {
+      "slide": 7,
+      "part": "ppt/slides/slide7.xml",
+      "layout": "ppt/slideLayouts/slideLayout17.xml",
+      "master": "ppt/slideMasters/slideMaster1.xml",
+      "background": null,
+      "shapes": [
+        {
+          "type": "nvGrpSpPr"
+        },
+        {
+          "type": "grpSpPr"
+        },
+        {
+          "type": "shape",
+          "id": "2",
+          "name": "Subtitle 1",
+          "placeholder": {
+            "type": "subTitle",
+            "idx": "1"
+          },
+          "text": {
+            "paragraphs": 10,
+            "runs": 10,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "shape",
+          "id": "3",
+          "name": "Title 2",
+          "placeholder": {
+            "type": "title",
+            "idx": null
+          },
+          "text": {
+            "paragraphs": 1,
+            "runs": 1,
+            "colors": [],
+            "fonts": [
+              {
+                "value": "Montserrat",
+                "count": 1
+              }
+            ],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "picture",
+          "id": "4",
+          "name": "Picture 3",
+          "embed": "rId2"
+        },
+        {
+          "type": "picture",
+          "id": "5",
+          "name": "Picture 4",
+          "embed": "rId3"
+        }
+      ],
+      "has_clrMapOvr": true,
+      "layout_tree": {
+        "part": "ppt/slideLayouts/slideLayout17.xml",
+        "name": "slideLayout17.xml",
+        "background": null,
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "133",
+            "name": "Google Shape;133;p18",
+            "placeholder": {
+              "type": "subTitle",
+              "idx": "1"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "accent1"
+                }
+              ],
+              "fonts": [],
+              "sizes_pt": [
+                {
+                  "value": 18.67,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "134",
+            "name": "Google Shape;134;p18",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          }
+        ],
+        "has_clrMap": false,
+        "has_clrMapOvr": true
+      },
+      "master_tree": {
+        "part": "ppt/slideMasters/slideMaster1.xml",
+        "name": "slideMaster1.xml",
+        "background": {
+          "fill": {
+            "type": "solid",
+            "color": {
+              "kind": "schemeClr",
+              "value": "lt1"
+            }
+          }
+        },
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "6",
+            "name": "Google Shape;6;p1",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Vidaloka",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 30.0,
+                  "count": 9
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "7",
+            "name": "Google Shape;7;p1",
+            "placeholder": {
+              "type": "body",
+              "idx": "1"
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 2,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 9
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 18.0,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          }
+        ],
+        "has_clrMap": true,
+        "has_clrMapOvr": false
+      }
+    },
+    {
+      "slide": 8,
+      "part": "ppt/slides/slide8.xml",
+      "layout": "ppt/slideLayouts/slideLayout17.xml",
+      "master": "ppt/slideMasters/slideMaster1.xml",
+      "background": null,
+      "shapes": [
+        {
+          "type": "nvGrpSpPr"
+        },
+        {
+          "type": "grpSpPr"
+        },
+        {
+          "type": "shape",
+          "id": "2",
+          "name": "Subtitle 1",
+          "placeholder": {
+            "type": "subTitle",
+            "idx": "1"
+          },
+          "text": {
+            "paragraphs": 9,
+            "runs": 8,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "shape",
+          "id": "3",
+          "name": "Title 2",
+          "placeholder": {
+            "type": "title",
+            "idx": null
+          },
+          "text": {
+            "paragraphs": 1,
+            "runs": 1,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "picture",
+          "id": "5",
+          "name": "Picture 4",
+          "embed": "rId2"
+        }
+      ],
+      "has_clrMapOvr": true,
+      "layout_tree": {
+        "part": "ppt/slideLayouts/slideLayout17.xml",
+        "name": "slideLayout17.xml",
+        "background": null,
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "133",
+            "name": "Google Shape;133;p18",
+            "placeholder": {
+              "type": "subTitle",
+              "idx": "1"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "accent1"
+                }
+              ],
+              "fonts": [],
+              "sizes_pt": [
+                {
+                  "value": 18.67,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "134",
+            "name": "Google Shape;134;p18",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          }
+        ],
+        "has_clrMap": false,
+        "has_clrMapOvr": true
+      },
+      "master_tree": {
+        "part": "ppt/slideMasters/slideMaster1.xml",
+        "name": "slideMaster1.xml",
+        "background": {
+          "fill": {
+            "type": "solid",
+            "color": {
+              "kind": "schemeClr",
+              "value": "lt1"
+            }
+          }
+        },
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "6",
+            "name": "Google Shape;6;p1",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Vidaloka",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 30.0,
+                  "count": 9
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "7",
+            "name": "Google Shape;7;p1",
+            "placeholder": {
+              "type": "body",
+              "idx": "1"
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 2,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 9
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 18.0,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          }
+        ],
+        "has_clrMap": true,
+        "has_clrMapOvr": false
+      }
+    },
+    {
+      "slide": 9,
+      "part": "ppt/slides/slide9.xml",
+      "layout": "ppt/slideLayouts/slideLayout17.xml",
+      "master": "ppt/slideMasters/slideMaster1.xml",
+      "background": null,
+      "shapes": [
+        {
+          "type": "nvGrpSpPr"
+        },
+        {
+          "type": "grpSpPr"
+        },
+        {
+          "type": "shape",
+          "id": "2",
+          "name": "Subtitle 1",
+          "placeholder": {
+            "type": "subTitle",
+            "idx": "1"
+          },
+          "text": {
+            "paragraphs": 3,
+            "runs": 2,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "shape",
+          "id": "3",
+          "name": "Title 2",
+          "placeholder": {
+            "type": "title",
+            "idx": null
+          },
+          "text": {
+            "paragraphs": 1,
+            "runs": 1,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "picture",
+          "id": "4",
+          "name": "Picture 3",
+          "embed": "rId2"
+        },
+        {
+          "type": "picture",
+          "id": "6",
+          "name": "Picture 5",
+          "embed": "rId3"
+        }
+      ],
+      "has_clrMapOvr": true,
+      "layout_tree": {
+        "part": "ppt/slideLayouts/slideLayout17.xml",
+        "name": "slideLayout17.xml",
+        "background": null,
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "133",
+            "name": "Google Shape;133;p18",
+            "placeholder": {
+              "type": "subTitle",
+              "idx": "1"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "accent1"
+                }
+              ],
+              "fonts": [],
+              "sizes_pt": [
+                {
+                  "value": 18.67,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "134",
+            "name": "Google Shape;134;p18",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          }
+        ],
+        "has_clrMap": false,
+        "has_clrMapOvr": true
+      },
+      "master_tree": {
+        "part": "ppt/slideMasters/slideMaster1.xml",
+        "name": "slideMaster1.xml",
+        "background": {
+          "fill": {
+            "type": "solid",
+            "color": {
+              "kind": "schemeClr",
+              "value": "lt1"
+            }
+          }
+        },
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "6",
+            "name": "Google Shape;6;p1",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Vidaloka",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 30.0,
+                  "count": 9
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "7",
+            "name": "Google Shape;7;p1",
+            "placeholder": {
+              "type": "body",
+              "idx": "1"
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 2,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 9
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 18.0,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          }
+        ],
+        "has_clrMap": true,
+        "has_clrMapOvr": false
+      }
+    },
+    {
+      "slide": 10,
+      "part": "ppt/slides/slide10.xml",
+      "layout": "ppt/slideLayouts/slideLayout26.xml",
+      "master": "ppt/slideMasters/slideMaster1.xml",
+      "background": null,
+      "shapes": [
+        {
+          "type": "nvGrpSpPr"
+        },
+        {
+          "type": "grpSpPr"
+        },
+        {
+          "type": "picture",
+          "id": "6",
+          "name": "Picture 5",
+          "embed": "rId2"
+        },
+        {
+          "type": "picture",
+          "id": "5",
+          "name": "Picture 4",
+          "embed": "rId3"
+        },
+        {
+          "type": "shape",
+          "id": "3",
+          "name": "Title 2",
+          "placeholder": {
+            "type": "title",
+            "idx": null
+          },
+          "text": {
+            "paragraphs": 1,
+            "runs": 1,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "shape",
+          "id": "2",
+          "name": "Subtitle 1",
+          "placeholder": {
+            "type": "subTitle",
+            "idx": "1"
+          },
+          "text": {
+            "paragraphs": 12,
+            "runs": 16,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        }
+      ],
+      "has_clrMapOvr": true,
+      "layout_tree": {
+        "part": "ppt/slideLayouts/slideLayout26.xml",
+        "name": "slideLayout26.xml",
+        "background": null,
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "199",
+            "name": "Google Shape;199;p27",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 0,
+              "colors": [],
+              "fonts": [],
+              "sizes_pt": [
+                {
+                  "value": 46.67,
+                  "count": 1
+                },
+                {
+                  "value": 48.0,
+                  "count": 8
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "200",
+            "name": "Google Shape;200;p27",
+            "placeholder": {
+              "type": "title",
+              "idx": "2"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "accent1"
+                }
+              ],
+              "fonts": [],
+              "sizes_pt": [
+                {
+                  "value": 80.0,
+                  "count": 8
+                },
+                {
+                  "value": 93.33,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "201",
+            "name": "Google Shape;201;p27",
+            "placeholder": {
+              "type": "subTitle",
+              "idx": "1"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 0,
+              "colors": [],
+              "fonts": [],
+              "sizes_pt": [
+                {
+                  "value": 18.67,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          }
+        ],
+        "has_clrMap": false,
+        "has_clrMapOvr": true
+      },
+      "master_tree": {
+        "part": "ppt/slideMasters/slideMaster1.xml",
+        "name": "slideMaster1.xml",
+        "background": {
+          "fill": {
+            "type": "solid",
+            "color": {
+              "kind": "schemeClr",
+              "value": "lt1"
+            }
+          }
+        },
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "6",
+            "name": "Google Shape;6;p1",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Vidaloka",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 30.0,
+                  "count": 9
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "7",
+            "name": "Google Shape;7;p1",
+            "placeholder": {
+              "type": "body",
+              "idx": "1"
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 2,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 9
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 18.0,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          }
+        ],
+        "has_clrMap": true,
+        "has_clrMapOvr": false
+      }
+    },
+    {
+      "slide": 11,
+      "part": "ppt/slides/slide11.xml",
+      "layout": "ppt/slideLayouts/slideLayout17.xml",
+      "master": "ppt/slideMasters/slideMaster1.xml",
+      "background": {
+        "fill": {
+          "type": "solid",
+          "color": {
+            "kind": "schemeClr",
+            "value": "lt1"
+          }
+        }
+      },
+      "shapes": [
+        {
+          "type": "nvGrpSpPr"
+        },
+        {
+          "type": "grpSpPr"
+        },
+        {
+          "type": "shape",
+          "id": "2",
+          "name": "Subtitle 1",
+          "placeholder": {
+            "type": "subTitle",
+            "idx": "1"
+          },
+          "text": {
+            "paragraphs": 12,
+            "runs": 8,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "shape",
+          "id": "3",
+          "name": "Title 2",
+          "placeholder": {
+            "type": "title",
+            "idx": null
+          },
+          "text": {
+            "paragraphs": 1,
+            "runs": 1,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "picture",
+          "id": "5",
+          "name": "Picture 4",
+          "embed": "rId2"
+        }
+      ],
+      "has_clrMapOvr": true,
+      "layout_tree": {
+        "part": "ppt/slideLayouts/slideLayout17.xml",
+        "name": "slideLayout17.xml",
+        "background": null,
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "133",
+            "name": "Google Shape;133;p18",
+            "placeholder": {
+              "type": "subTitle",
+              "idx": "1"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "accent1"
+                }
+              ],
+              "fonts": [],
+              "sizes_pt": [
+                {
+                  "value": 18.67,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "134",
+            "name": "Google Shape;134;p18",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          }
+        ],
+        "has_clrMap": false,
+        "has_clrMapOvr": true
+      },
+      "master_tree": {
+        "part": "ppt/slideMasters/slideMaster1.xml",
+        "name": "slideMaster1.xml",
+        "background": {
+          "fill": {
+            "type": "solid",
+            "color": {
+              "kind": "schemeClr",
+              "value": "lt1"
+            }
+          }
+        },
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "6",
+            "name": "Google Shape;6;p1",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Vidaloka",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 30.0,
+                  "count": 9
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "7",
+            "name": "Google Shape;7;p1",
+            "placeholder": {
+              "type": "body",
+              "idx": "1"
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 2,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 9
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 18.0,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          }
+        ],
+        "has_clrMap": true,
+        "has_clrMapOvr": false
+      }
+    },
+    {
+      "slide": 12,
+      "part": "ppt/slides/slide12.xml",
+      "layout": "ppt/slideLayouts/slideLayout53.xml",
+      "master": "ppt/slideMasters/slideMaster1.xml",
+      "background": null,
+      "shapes": [
+        {
+          "type": "nvGrpSpPr"
+        },
+        {
+          "type": "grpSpPr"
+        },
+        {
+          "type": "picture",
+          "id": "4",
+          "name": "Picture 3",
+          "embed": "rId2"
+        },
+        {
+          "type": "shape",
+          "id": "5",
+          "name": "TextBox 4",
+          "fill": {
+            "type": "none"
+          },
+          "text": {
+            "paragraphs": 3,
+            "runs": 5,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        }
+      ],
+      "has_clrMapOvr": true,
+      "layout_tree": {
+        "part": "ppt/slideLayouts/slideLayout53.xml",
+        "name": "slideLayout53.xml",
+        "background": null,
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          }
+        ],
+        "has_clrMap": false,
+        "has_clrMapOvr": true
+      },
+      "master_tree": {
+        "part": "ppt/slideMasters/slideMaster1.xml",
+        "name": "slideMaster1.xml",
+        "background": {
+          "fill": {
+            "type": "solid",
+            "color": {
+              "kind": "schemeClr",
+              "value": "lt1"
+            }
+          }
+        },
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "6",
+            "name": "Google Shape;6;p1",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Vidaloka",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 30.0,
+                  "count": 9
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "7",
+            "name": "Google Shape;7;p1",
+            "placeholder": {
+              "type": "body",
+              "idx": "1"
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 2,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 9
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 18.0,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          }
+        ],
+        "has_clrMap": true,
+        "has_clrMapOvr": false
+      }
+    },
+    {
+      "slide": 13,
+      "part": "ppt/slides/slide13.xml",
+      "layout": "ppt/slideLayouts/slideLayout1.xml",
+      "master": "ppt/slideMasters/slideMaster1.xml",
+      "background": null,
+      "shapes": [
+        {
+          "type": "nvGrpSpPr"
+        },
+        {
+          "type": "grpSpPr"
+        },
+        {
+          "type": "shape",
+          "id": "2",
+          "name": "Title 1",
+          "placeholder": {
+            "type": "ctrTitle",
+            "idx": null
+          },
+          "text": {
+            "paragraphs": 1,
+            "runs": 1,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [
+              {
+                "value": 30.0,
+                "count": 1
+              }
+            ],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "shape",
+          "id": "5",
+          "name": "Subtitle 4",
+          "placeholder": {
+            "type": "subTitle",
+            "idx": "1"
+          },
+          "text": {
+            "paragraphs": 1,
+            "runs": 0,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        }
+      ],
+      "has_clrMapOvr": true,
+      "layout_tree": {
+        "part": "ppt/slideLayouts/slideLayout1.xml",
+        "name": "slideLayout1.xml",
+        "background": null,
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "9",
+            "name": "Google Shape;9;p2",
+            "placeholder": {
+              "type": "ctrTitle",
+              "idx": null
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 69.33,
+                  "count": 8
+                },
+                {
+                  "value": 86.66,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "10",
+            "name": "Google Shape;10;p2",
+            "placeholder": {
+              "type": "subTitle",
+              "idx": "1"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 0,
+              "colors": [],
+              "fonts": [],
+              "sizes_pt": [
+                {
+                  "value": 21.33,
+                  "count": 1
+                },
+                {
+                  "value": 37.33,
+                  "count": 8
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          }
+        ],
+        "has_clrMap": false,
+        "has_clrMapOvr": true
+      },
+      "master_tree": {
+        "part": "ppt/slideMasters/slideMaster1.xml",
+        "name": "slideMaster1.xml",
+        "background": {
+          "fill": {
+            "type": "solid",
+            "color": {
+              "kind": "schemeClr",
+              "value": "lt1"
+            }
+          }
+        },
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "6",
+            "name": "Google Shape;6;p1",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Vidaloka",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 30.0,
+                  "count": 9
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "7",
+            "name": "Google Shape;7;p1",
+            "placeholder": {
+              "type": "body",
+              "idx": "1"
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 2,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 9
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 18.0,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          }
+        ],
+        "has_clrMap": true,
+        "has_clrMapOvr": false
+      }
+    },
+    {
+      "slide": 14,
+      "part": "ppt/slides/slide14.xml",
+      "layout": "ppt/slideLayouts/slideLayout17.xml",
+      "master": "ppt/slideMasters/slideMaster1.xml",
+      "background": null,
+      "shapes": [
+        {
+          "type": "nvGrpSpPr"
+        },
+        {
+          "type": "grpSpPr"
+        },
+        {
+          "type": "shape",
+          "id": "565",
+          "name": "Google Shape;565;p68",
+          "placeholder": {
+            "type": "title",
+            "idx": null
+          },
+          "text": {
+            "paragraphs": 1,
+            "runs": 1,
+            "colors": [],
+            "fonts": [
+              {
+                "value": "Montserrat",
+                "count": 1
+              }
+            ],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "shape",
+          "id": "566",
+          "name": "Google Shape;566;p68",
+          "placeholder": {
+            "type": "subTitle",
+            "idx": "1"
+          },
+          "text": {
+            "paragraphs": 15,
+            "runs": 16,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        }
+      ],
+      "has_clrMapOvr": true,
+      "layout_tree": {
+        "part": "ppt/slideLayouts/slideLayout17.xml",
+        "name": "slideLayout17.xml",
+        "background": null,
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "133",
+            "name": "Google Shape;133;p18",
+            "placeholder": {
+              "type": "subTitle",
+              "idx": "1"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "accent1"
+                }
+              ],
+              "fonts": [],
+              "sizes_pt": [
+                {
+                  "value": 18.67,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "134",
+            "name": "Google Shape;134;p18",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          }
+        ],
+        "has_clrMap": false,
+        "has_clrMapOvr": true
+      },
+      "master_tree": {
+        "part": "ppt/slideMasters/slideMaster1.xml",
+        "name": "slideMaster1.xml",
+        "background": {
+          "fill": {
+            "type": "solid",
+            "color": {
+              "kind": "schemeClr",
+              "value": "lt1"
+            }
+          }
+        },
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "6",
+            "name": "Google Shape;6;p1",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Vidaloka",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 30.0,
+                  "count": 9
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "7",
+            "name": "Google Shape;7;p1",
+            "placeholder": {
+              "type": "body",
+              "idx": "1"
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 2,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 9
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 18.0,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          }
+        ],
+        "has_clrMap": true,
+        "has_clrMapOvr": false
+      }
+    },
+    {
+      "slide": 15,
+      "part": "ppt/slides/slide15.xml",
+      "layout": "ppt/slideLayouts/slideLayout17.xml",
+      "master": "ppt/slideMasters/slideMaster1.xml",
+      "background": null,
+      "shapes": [
+        {
+          "type": "nvGrpSpPr"
+        },
+        {
+          "type": "grpSpPr"
+        },
+        {
+          "type": "shape",
+          "id": "3",
+          "name": "Title 2",
+          "placeholder": {
+            "type": "title",
+            "idx": null
+          },
+          "text": {
+            "paragraphs": 1,
+            "runs": 1,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "shape",
+          "id": "5",
+          "name": "TextBox 4",
+          "fill": {
+            "type": "none"
+          },
+          "text": {
+            "paragraphs": 14,
+            "runs": 13,
+            "colors": [],
+            "fonts": [],
+            "sizes_pt": [],
+            "has_lstStyle": true
+          }
+        },
+        {
+          "type": "picture",
+          "id": "6",
+          "name": "Picture 5",
+          "embed": "rId2"
+        }
+      ],
+      "has_clrMapOvr": true,
+      "layout_tree": {
+        "part": "ppt/slideLayouts/slideLayout17.xml",
+        "name": "slideLayout17.xml",
+        "background": null,
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "133",
+            "name": "Google Shape;133;p18",
+            "placeholder": {
+              "type": "subTitle",
+              "idx": "1"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "accent1"
+                }
+              ],
+              "fonts": [],
+              "sizes_pt": [
+                {
+                  "value": 18.67,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "134",
+            "name": "Google Shape;134;p18",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          },
+          {
+            "type": "cxnSp"
+          }
+        ],
+        "has_clrMap": false,
+        "has_clrMapOvr": true
+      },
+      "master_tree": {
+        "part": "ppt/slideMasters/slideMaster1.xml",
+        "name": "slideMaster1.xml",
+        "background": {
+          "fill": {
+            "type": "solid",
+            "color": {
+              "kind": "schemeClr",
+              "value": "lt1"
+            }
+          }
+        },
+        "shapes": [
+          {
+            "type": "nvGrpSpPr"
+          },
+          {
+            "type": "grpSpPr"
+          },
+          {
+            "type": "shape",
+            "id": "6",
+            "name": "Google Shape;6;p1",
+            "placeholder": {
+              "type": "title",
+              "idx": null
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 1,
+              "runs": 1,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk1"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Vidaloka",
+                  "count": 1
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 30.0,
+                  "count": 9
+                }
+              ],
+              "has_lstStyle": true
+            }
+          },
+          {
+            "type": "shape",
+            "id": "7",
+            "name": "Google Shape;7;p1",
+            "placeholder": {
+              "type": "body",
+              "idx": "1"
+            },
+            "fill": {
+              "type": "none"
+            },
+            "text": {
+              "paragraphs": 2,
+              "runs": 2,
+              "colors": [
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                },
+                {
+                  "kind": "schemeClr",
+                  "value": "dk2"
+                }
+              ],
+              "fonts": [
+                {
+                  "value": "Montserrat",
+                  "count": 9
+                }
+              ],
+              "sizes_pt": [
+                {
+                  "value": 18.0,
+                  "count": 1
+                }
+              ],
+              "has_lstStyle": true
+            }
+          }
+        ],
+        "has_clrMap": true,
+        "has_clrMapOvr": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "dark1": "#FFFFFF",
+  "light1": "#0B0B0E",
+  "dark2": "#2C2C34",
+  "light2": "#E9ECF2",
+  "accent1": "#1F6BFF",
+  "accent2": "#E0328C",
+  "accent3": "#F6A225",
+  "accent4": "#6B3AF6",
+  "accent5": "#38D3FF",
+  "accent6": "#FF4D6D",
+  "hlink": "#1F6BFF",
+  "folHlink": "#C0186B",
+  "majorFont": "Aptos Display",
+  "minorFont": "Aptos"
+}

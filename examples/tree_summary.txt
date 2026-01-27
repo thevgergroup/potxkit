@@ -1,0 +1,4 @@
+slide 1:
+  slideMaster: bg=scheme(lt1) fills(hard=0, theme=3) text(hard=0, theme=2) fonts=Aptos(6) sizes={18, 24} clrMap=yes
+  slideLayout: bg=none fills(hard=0, theme=2) text(hard=0, theme=1) fonts=Aptos(4) sizes={18} clrMap=yes
+  local: bg=srgb(#F5F2EE) fills(hard=2, theme=1) text(hard=1, theme=0) fonts=Aptos(3) sizes={18, 24} clrMap=override
