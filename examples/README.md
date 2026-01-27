@@ -84,6 +84,31 @@ poetry run potxkit-cli set-fonts output.potx --input path/to/template.potx --maj
 
 Use for simple theme updates without touching layouts.
 
+### Add layout background or image layers
+
+```bash
+poetry run potxkit-cli set-layout-bg --layout "Layout Bob" \
+  --image path/to/hero.png output.pptx --input path/to/template.pptx
+```
+
+```bash
+poetry run potxkit-cli set-layout-image --layout "Layout Bob" \
+  --image path/to/overlay.png --x 1 --y 1 --w 3 --h 2 \
+  output.pptx --input path/to/template.pptx
+```
+
+Use when you want layouts to carry the visuals instead of individual slides.
+
+### Set text sizes and weights
+
+```bash
+poetry run potxkit-cli set-text-styles --layout "Layout Bob" \
+  --title-size 30 --title-bold --body-size 20 --body-regular \
+  output.pptx --input path/to/template.pptx
+```
+
+Use to keep title/body sizes consistent across slides.
+
 ### Create a layout from a slide
 
 ```bash

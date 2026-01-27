@@ -1,6 +1,37 @@
 # potxkit
 
-potxkit helps you inspect, clean, and standardize PowerPoint themes and slide styling. It works directly with OOXML parts so you can move local slide formatting back into the master/layouts, apply consistent palettes, and generate branded templates without hand-editing every slide.
+Make PowerPoint templates consistent without manual, slide-by-slide cleanup.
+
+[![Install Claude Desktop](https://img.shields.io/badge/Claude%20Desktop-Install-blue)](https://github.com/thevgergroup/potxkit/releases/latest/download/potxkit.mcpb)
+[![Add to Cursor](https://img.shields.io/badge/Cursor-Add%20to%20Cursor-black)](cursor://anysphere.cursor-deeplink/mcp/install?name=potxkit&config=eyJwb3R4a2l0Ijp7ImNvbW1hbmQiOiJ1dngiLCJhcmdzIjpbInBvdHhraXQiXX19)
+
+## Links
+
+- GitHub: https://github.com/thevgergroup/potxkit
+- PyPI: https://pypi.org/project/potxkit/
+
+## Why this project exists (plain English)
+
+PowerPoint decks get messy fast: different people paste content, change colors and fonts by hand, and override styles on individual slides. That makes branding drift and turns “fix the template” into a long, manual job. potxkit gives you a way to audit and fix those problems in bulk.
+
+## How PowerPoint styling works (simple view)
+
+PowerPoint styling is layered:
+
+1) **Theme**: global colors + fonts for the file.
+2) **Slide master**: the base look for all slides.
+3) **Layouts**: variations like “Title Slide,” “Section Header,” etc.
+4) **Local overrides**: formatting applied directly on a slide or shape.
+
+When local overrides are everywhere, layouts and the master stop controlling the look. potxkit helps you see where formatting is coming from and move it back into the master/layouts so your deck stays consistent.
+
+## How potxkit unlocks this (and why agents help)
+
+- Audit where colors/fonts/backgrounds/images are coming from.
+- Strip local overrides so layouts and masters drive the look.
+- Apply a consistent palette mapping across slides.
+- Set theme fonts, sizes, and layout images programmatically.
+- Run as an MCP server so an agent can build or standardize templates automatically.
 
 ## What you can do
 
@@ -49,6 +80,93 @@ tpl.theme.fonts.set_major("Aptos Display")
 tpl.save("brand-template.potx")
 ```
 
+## MCP client setup
+
+potxkit runs as a local MCP server. Most clients accept this config:
+
+```json
+{
+  "mcpServers": {
+    "potxkit": {
+      "command": "uvx",
+      "args": ["potxkit"]
+    }
+  }
+}
+```
+
+### One-click installs
+
+- **Claude Desktop**: download `potxkit.mcpb` from GitHub releases and install via Settings -> Extensions -> Advanced Settings -> Install Extension.
+  - Suggested release asset: https://github.com/thevgergroup/potxkit/releases/latest/download/potxkit.mcpb
+- **Cursor**: Add to Cursor link:
+  - cursor://anysphere.cursor-deeplink/mcp/install?name=potxkit&config=eyJwb3R4a2l0Ijp7ImNvbW1hbmQiOiJ1dngiLCJhcmdzIjpbInBvdHhraXQiXX19
+
+### CLI or config installs
+
+**Claude Code**
+
+```bash
+claude mcp add --transport stdio potxkit -- uvx potxkit
+```
+
+If you already installed the Claude Desktop extension, you can import it:
+
+```bash
+claude mcp add-from-claude-desktop
+```
+
+**Codex (OpenAI)**
+
+```bash
+codex mcp add potxkit -- uvx potxkit
+```
+
+Or add to `~/.codex/config.toml` (or project `.codex/config.toml`):
+
+```toml
+[mcp_servers.potxkit]
+command = "uvx"
+args = ["potxkit"]
+```
+
+**Gemini CLI**
+
+Add to your project `.gemini/settings.json` under `mcpServers`:
+
+```json
+{
+  "mcpServers": {
+    "potxkit": {
+      "command": "uvx",
+      "args": ["potxkit"]
+    }
+  }
+}
+```
+
+**Roo Code**
+
+Add to `.roo/mcp.json` (project) or `mcp_settings.json` (global):
+
+```json
+{
+  "mcpServers": {
+    "potxkit": {
+      "command": "uvx",
+      "args": ["potxkit"]
+    }
+  }
+}
+```
+
+### Maintainer release checklist (one-click installs)
+
+- Build or update the `potxkit.mcpb` bundle.
+- Upload `potxkit.mcpb` to the latest GitHub release so the Claude Desktop link works.
+- If the MCP command or args change, update the Cursor deep link config (base64 of `{\"potxkit\":{\"command\":\"uvx\",\"args\":[\"potxkit\"]}}`).
+- Click both install links to verify they still open correctly.
+
 ## Common workflows
 
 Audit a deck to find local formatting:
@@ -89,6 +207,45 @@ poetry run potxkit-cli set-theme-names output.potx --input path/to/template.potx
   --theme "Code Janitor" --colors "Code Janitor Colors" --fonts "Code Janitor Fonts"
 ```
 
+## Images, palettes, fonts, and sizes
+
+Add a background image to a layout:
+
+```bash
+poetry run potxkit-cli set-layout-bg --layout "Layout Bob" \
+  --image path/to/hero.png output.pptx --input path/to/template.pptx
+```
+
+Add an image layer (x/y/w/h in inches unless `--units emu`):
+
+```bash
+poetry run potxkit-cli set-layout-image --layout "Layout Bob" \
+  --image path/to/overlay.png --x 1 --y 1 --w 3 --h 2 \
+  output.pptx --input path/to/template.pptx
+```
+
+Apply a palette mapping:
+
+```bash
+poetry run potxkit-cli normalize examples/mapping.json output.pptx \
+  --input path/to/template.pptx --slides 1,3-5
+```
+
+Set fonts:
+
+```bash
+poetry run potxkit-cli set-fonts output.potx --input path/to/template.potx \
+  --major "Aptos Display" --minor "Aptos"
+```
+
+Set text sizes (points) and bold/regular for a layout:
+
+```bash
+poetry run potxkit-cli set-text-styles --layout "Layout Bob" \
+  --title-size 30 --title-bold --body-size 20 --body-regular \
+  output.pptx --input path/to/template.pptx
+```
+
 ## Examples
 
 See `examples/README.md` for step-by-step walkthroughs and the reason each command exists.
@@ -108,3 +265,7 @@ Full API reference in `docs/SDK.md`.
 
 - potxkit edits theme data and slide/layout formatting. It does not render slides.
 - For complex branded layouts, start from a PowerPoint-authored `.potx` and use potxkit to standardize themes and remove local overrides.
+
+## License
+
+MIT License. See `LICENSE`.

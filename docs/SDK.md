@@ -2,7 +2,20 @@
 
 This SDK focuses on editing theme colors and fonts in PowerPoint `.potx` files. It operates directly on Open XML parts and preserves existing layout/masters unless you replace the base template.
 
+## Links
+
+- GitHub: https://github.com/thevgergroup/potxkit
+- PyPI: https://pypi.org/project/potxkit/
+
 ## Installation
+
+Install from PyPI:
+
+```bash
+pip install potxkit
+```
+
+Install for local development:
 
 ```bash
 poetry install
@@ -34,6 +47,93 @@ Use the CLI via:
 ```bash
 poetry run potxkit-cli --help
 ```
+
+## MCP client setup
+
+potxkit runs as a local MCP server. Most clients accept this config:
+
+```json
+{
+  "mcpServers": {
+    "potxkit": {
+      "command": "uvx",
+      "args": ["potxkit"]
+    }
+  }
+}
+```
+
+### One-click installs
+
+- **Claude Desktop**: download `potxkit.mcpb` from GitHub releases and install via Settings -> Extensions -> Advanced Settings -> Install Extension.
+  - Suggested release asset: https://github.com/thevgergroup/potxkit/releases/latest/download/potxkit.mcpb
+- **Cursor**: Add to Cursor link:
+  - cursor://anysphere.cursor-deeplink/mcp/install?name=potxkit&config=eyJwb3R4a2l0Ijp7ImNvbW1hbmQiOiJ1dngiLCJhcmdzIjpbInBvdHhraXQiXX19
+
+### CLI or config installs
+
+**Claude Code**
+
+```bash
+claude mcp add --transport stdio potxkit -- uvx potxkit
+```
+
+If you already installed the Claude Desktop extension, you can import it:
+
+```bash
+claude mcp add-from-claude-desktop
+```
+
+**Codex (OpenAI)**
+
+```bash
+codex mcp add potxkit -- uvx potxkit
+```
+
+Or add to `~/.codex/config.toml` (or project `.codex/config.toml`):
+
+```toml
+[mcp_servers.potxkit]
+command = "uvx"
+args = ["potxkit"]
+```
+
+**Gemini CLI**
+
+Add to your project `.gemini/settings.json` under `mcpServers`:
+
+```json
+{
+  "mcpServers": {
+    "potxkit": {
+      "command": "uvx",
+      "args": ["potxkit"]
+    }
+  }
+}
+```
+
+**Roo Code**
+
+Add to `.roo/mcp.json` (project) or `mcp_settings.json` (global):
+
+```json
+{
+  "mcpServers": {
+    "potxkit": {
+      "command": "uvx",
+      "args": ["potxkit"]
+    }
+  }
+}
+```
+
+### Maintainer release checklist (one-click installs)
+
+- Build or update the `potxkit.mcpb` bundle.
+- Upload `potxkit.mcpb` to the latest GitHub release so the Claude Desktop link works.
+- If the MCP command or args change, update the Cursor deep link config (base64 of `{\"potxkit\":{\"command\":\"uvx\",\"args\":[\"potxkit\"]}}`).
+- Click both install links to verify they still open correctly.
 
 ## MCP tools (summary)
 

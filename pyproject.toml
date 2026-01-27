@@ -5,12 +5,20 @@ description = "POTX theme editor"
 authors = [
     {name = "patrick o'leary",email = "pjaol@pjaol.com"}
 ]
+license = {file = "LICENSE"}
 readme = "README.md"
 requires-python = ">=3.11,<4.0"
 dependencies = [
     "fsspec>=2024.2.0",
     "fastmcp>=2.0,<3",
 ]
+
+[project.urls]
+Homepage = "https://github.com/thevgergroup/potxkit"
+Repository = "https://github.com/thevgergroup/potxkit"
+Issues = "https://github.com/thevgergroup/potxkit/issues"
+Documentation = "https://github.com/thevgergroup/potxkit/blob/main/docs/SDK.md"
+PyPI = "https://pypi.org/project/potxkit/"
 
 [project.scripts]
 potxkit = "potxkit.mcp_server:main"
