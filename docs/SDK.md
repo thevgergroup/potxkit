@@ -16,6 +16,19 @@ The MCP server is the default entry point and runs over stdio (FastMCP).
 uvx potxkit
 ```
 
+Example MCP config (`docs/mcp.json`):
+
+```json
+{
+  "mcpServers": {
+    "potxkit": {
+      "command": "uvx",
+      "args": ["potxkit"]
+    }
+  }
+}
+```
+
 Use the CLI via:
 
 ```bash
@@ -106,6 +119,7 @@ poetry run potxkit-cli sanitize output.pptx --input path/to/template.pptx
 poetry run potxkit-cli dump-tree path/to/template.pptx --layout --master --text --pretty --output tree.json
 poetry run potxkit-cli dump-tree path/to/template.pptx --grouped --text --pretty --output tree_grouped.json
 poetry run potxkit-cli dump-tree path/to/template.pptx --grouped --text --summary --output tree_summary.txt
+poetry run potxkit-cli dump-tree path/to/template.pptx --grouped --text --summary --summary-local-only --output tree_summary_local.txt
 poetry run potxkit-cli auto-layout output.pptx --input path/to/template.pptx --group-by p,b --strip-colors --strip-fonts
 ```
 
@@ -131,7 +145,7 @@ Use `--summary` for a readable console report that flags hard-coded colors, text
 - `prune-layouts` removes unused layout parts from the master and package.
 - `reindex-layouts` renumbers layout files and updates slide/master references.
 - `sanitize` adds missing slide defaults (clrMapOvr, lstStyle, and bg noFill) so PowerPoint doesn't repair the file.
-- `dump-tree` emits a hierarchical JSON view of slide backgrounds, shapes, fills, and text color nodes. Use `--grouped` to emit `slideMaster` / `slideLayout` / `local` blocks per slide. Use `--summary` for a compact text report including fonts and sizes.
+- `dump-tree` emits a hierarchical JSON view of slide backgrounds, shapes, fills, and text color nodes. Use `--grouped` to emit `slideMaster` / `slideLayout` / `local` blocks per slide. Use `--summary` for a compact text report including fonts and sizes; add `--summary-local-only` to filter to slides with local hard-coded colors.
 - `auto-layout` groups slides and creates layouts per group (optional stripping of colors/fonts).
 
 Notes:

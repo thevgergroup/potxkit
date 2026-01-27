@@ -348,6 +348,11 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="Print a human-friendly summary instead of JSON",
     )
+    dump_tree_parser.add_argument(
+        "--summary-local-only",
+        action="store_true",
+        help="Only include slides with local hard-coded colors in summary output",
+    )
 
     auto_layout_parser = subparsers.add_parser(
         "auto-layout", help="Auto-generate layouts by grouping slides"
@@ -849,7 +854,7 @@ def _handle_dump_tree(args: argparse.Namespace) -> int:
     )
     payload = dump_tree(pkg, slide_numbers=slide_numbers, options=options)
     if args.summary:
-        lines = summarize_tree(payload)
+        lines = summarize_tree(payload, local_only=args.summary_local_only)
         output = "\n".join(lines)
         if args.output:
             with open(args.output, "w", encoding="utf-8") as handle:
@@ -859,6 +864,9 @@ def _handle_dump_tree(args: argparse.Namespace) -> int:
             return 0
         print(output)
         return 0
+    if args.summary_local_only and not args.summary:
+        print("Use --summary with --summary-local-only.")
+        return 2
 
     if args.output:
         with open(args.output, "w", encoding="utf-8") as handle:

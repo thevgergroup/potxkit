@@ -149,3 +149,15 @@ def test_dump_tree_summary_includes_local() -> None:
     lines = summarize_tree(payload)
     assert any(line.startswith("slide 1:") for line in lines)
     assert any("local:" in line for line in lines)
+
+
+def test_dump_tree_summary_local_only_filters() -> None:
+    pkg = OOXMLPackage(_build_deck())
+    payload = dump_tree(
+        pkg,
+        options=DumpTreeOptions(
+            include_layout=True, include_master=True, include_text=True, grouped=True
+        ),
+    )
+    lines = summarize_tree(payload, local_only=True)
+    assert any(line.startswith("slide 1:") for line in lines)

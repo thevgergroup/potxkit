@@ -28,6 +28,19 @@ The MCP server is the default entry point and runs over stdio. After installing 
 uvx potxkit
 ```
 
+Example MCP config (`docs/mcp.json`):
+
+```json
+{
+  "mcpServers": {
+    "potxkit": {
+      "command": "uvx",
+      "args": ["potxkit"]
+    }
+  }
+}
+```
+
 If you want the CLI instead:
 
 ```bash
@@ -113,6 +126,7 @@ poetry run potxkit-cli sanitize output.pptx --input path/to/template.pptx
 poetry run potxkit-cli dump-tree path/to/template.pptx --layout --master --text --pretty --output tree.json
 poetry run potxkit-cli dump-tree path/to/template.pptx --grouped --text --pretty --output tree_grouped.json
 poetry run potxkit-cli dump-tree path/to/template.pptx --grouped --text --summary --output tree_summary.txt
+poetry run potxkit-cli dump-tree path/to/template.pptx --grouped --text --summary --summary-local-only --output tree_summary_local.txt
 poetry run potxkit-cli auto-layout output.pptx --input path/to/template.pptx --group-by p,b --strip-colors --strip-fonts
 ```
 

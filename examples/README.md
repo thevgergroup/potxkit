@@ -16,6 +16,19 @@ Start the MCP server over stdio:
 uvx potxkit
 ```
 
+Example MCP config (`docs/mcp.json`):
+
+```json
+{
+  "mcpServers": {
+    "potxkit": {
+      "command": "uvx",
+      "args": ["potxkit"]
+    }
+  }
+}
+```
+
 ## Scripts
 
 - `basic_edit.py`: edit theme colors and fonts in an existing `.potx`.
@@ -50,6 +63,7 @@ poetry run potxkit-cli set-text-styles --layout "Layout Bob" --from-slide 7 outp
 poetry run potxkit-cli set-layout-bg --layout "Layout Bob" --image path/to/hero.png output.pptx --input path/to/template.pptx
 poetry run potxkit-cli set-layout-image --layout "Layout Bob" --image path/to/overlay.png --x 1 --y 1 --w 3 --h 2 output.pptx --input path/to/template.pptx
 poetry run potxkit-cli dump-tree path/to/template.pptx --grouped --text --summary --output tree_summary.txt
+poetry run potxkit-cli dump-tree path/to/template.pptx --grouped --text --summary --summary-local-only --output tree_summary_local.txt
 ```
 
 ### Run

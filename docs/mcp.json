@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "potxkit": {
+      "command": "uvx",
+      "args": ["potxkit"]
+    }
+  }
+}

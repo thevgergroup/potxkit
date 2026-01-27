@@ -95,10 +95,12 @@ def dump_tree(
     return {"slides": slides}
 
 
-def summarize_tree(payload: dict[str, Any]) -> list[str]:
+def summarize_tree(payload: dict[str, Any], *, local_only: bool = False) -> list[str]:
     lines: list[str] = []
     slides = payload.get("slides", [])
     for slide in slides:
+        if local_only and not _slide_has_local_hardcoded(slide):
+            continue
         lines.append(f"slide {slide.get('slide')}:")
         for key in ["slideMaster", "slideLayout", "local"]:
             if key not in slide:
@@ -412,6 +414,23 @@ def _summarize_layer(layer: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _slide_has_local_hardcoded(slide: dict[str, Any]) -> bool:
+    local = slide.get("local") or {}
+    bg = local.get("background") or {}
+    if _has_hardcoded_fill(bg.get("fill")):
+        return True
+
+    for shape in _iter_shapes(local.get("shapes", [])):
+        if _has_hardcoded_fill(shape.get("fill")):
+            return True
+        text = shape.get("text") or {}
+        for color in text.get("colors", []):
+            kind = color.get("kind")
+            if kind and kind != "schemeClr":
+                return True
+    return False
+
+
 def _iter_shapes(shapes: Iterable[dict[str, Any]]) -> Iterable[dict[str, Any]]:
     for shape in shapes:
         yield shape
@@ -439,3 +458,27 @@ def _format_fill(fill: dict[str, Any]) -> str:
             return f"sys({val}{suffix})"
         return f"{kind}({val})"
     return fill.get("type", "none")
+
+
+def _has_hardcoded_fill(fill: dict[str, Any] | None) -> bool:
+    if not fill:
+        return False
+    fill_type = fill.get("type")
+    if fill_type == "solid":
+        color = fill.get("color") or {}
+        kind = color.get("kind")
+        return bool(kind and kind != "schemeClr")
+    if fill_type == "gradient":
+        for stop in fill.get("stops", []):
+            color = stop.get("color") or {}
+            kind = color.get("kind")
+            if kind and kind != "schemeClr":
+                return True
+        return False
+    if fill_type == "pattern":
+        for color in fill.get("colors", []):
+            kind = color.get("kind")
+            if kind and kind != "schemeClr":
+                return True
+        return False
+    return False
