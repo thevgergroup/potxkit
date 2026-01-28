@@ -231,6 +231,39 @@ poetry run potxkit-cli normalize examples/mapping.json output.pptx \
   --input path/to/template.pptx --slides 1,3-5
 ```
 
+Full palette file example (for `apply-palette`):
+
+```json
+{
+  "dark1": "#FFFFFF",
+  "light1": "#0B0B0E",
+  "dark2": "#2C2C34",
+  "light2": "#E9ECF2",
+  "accent1": "#1F6BFF",
+  "accent2": "#E0328C",
+  "accent3": "#F6A225",
+  "accent4": "#6B3AF6",
+  "accent5": "#38D3FF",
+  "accent6": "#FF4D6D",
+  "hlink": "#1F6BFF",
+  "folHlink": "#C0186B",
+  "majorFont": "Aptos Display",
+  "minorFont": "Aptos"
+}
+```
+
+What the keys mean (simple):
+
+- `dark1`, `light1`, `dark2`, `light2`: base theme colors PowerPoint uses for text/backgrounds.
+- `accent1`–`accent6`: the six accent colors used for charts, shapes, and theme color picks.
+- `hlink`, `folHlink`: hyperlink and followed‑link colors.
+- `majorFont`, `minorFont`: theme font families (major = headings, minor = body).
+
+```bash
+poetry run potxkit-cli apply-palette examples/palette.json output.potx \
+  --input path/to/template.potx
+```
+
 Set fonts:
 
 ```bash
