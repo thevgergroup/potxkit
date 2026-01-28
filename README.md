@@ -10,11 +10,11 @@ Make PowerPoint templates consistent without manual, slide-by-slide cleanup.
 - GitHub: https://github.com/thevgergroup/potxkit
 - PyPI: https://pypi.org/project/potxkit/
 
-## Why this project exists (plain English)
+## Why this exists
 
-PowerPoint decks get messy fast: different people paste content, change colors and fonts by hand, and override styles on individual slides. That makes branding drift and turns “fix the template” into a long, manual job. potxkit gives you a way to audit and fix those problems in bulk.
+PowerPoint templates have been hard to understand and fix for decades. Most decks slowly drift as people paste content and override styles. Many PowerPoint libraries make this worse by embedding colors and fonts directly on each slide, which bypasses the slide master and makes the template effectively useless. potxkit fixes the root problem by moving formatting back into the theme, master, and layouts so the template stays in control.
 
-## How PowerPoint styling works (simple view)
+## PowerPoint styling hierarchy
 
 PowerPoint styling is layered:
 
@@ -23,15 +23,17 @@ PowerPoint styling is layered:
 3) **Layouts**: variations like “Title Slide,” “Section Header,” etc.
 4) **Local overrides**: formatting applied directly on a slide or shape.
 
-When local overrides are everywhere, layouts and the master stop controlling the look. potxkit helps you see where formatting is coming from and move it back into the master/layouts so your deck stays consistent.
+When local overrides are everywhere, layouts and the master stop controlling the look. potxkit shows you where formatting is coming from and lets you push it back into the master/layouts so the deck behaves like a real template again.
 
-## How potxkit unlocks this (and why agents help)
+## Why potxkit + AI agents
+
+Using a CLI to fix templates is powerful but not friendly. Running potxkit as an MCP server lets an AI agent apply the right sequence of audits and fixes for you—cleaning overrides, applying palettes, and standardizing layouts in minutes instead of hours.
 
 - Audit where colors/fonts/backgrounds/images are coming from.
 - Strip local overrides so layouts and masters drive the look.
 - Apply a consistent palette mapping across slides.
 - Set theme fonts, sizes, and layout images programmatically.
-- Run as an MCP server so an agent can build or standardize templates automatically.
+- Let agents orchestrate the workflow with plain-language instructions.
 
 ## What you can do
 
