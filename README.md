@@ -1,3 +1,5 @@
+![potxkit logo](https://raw.githubusercontent.com/thevgergroup/potxkit/main/assets/logo.png)
+
 # potxkit
 
 Make PowerPoint templates consistent without manual, slide-by-slide cleanup.
