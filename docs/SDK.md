@@ -130,8 +130,8 @@ Add to `.roo/mcp.json` (project) or `mcp_settings.json` (global):
 
 ### Maintainer release checklist (one-click installs)
 
-- Build or update the `potxkit.mcpb` bundle.
-- Upload `potxkit.mcpb` to the latest GitHub release so the Claude Desktop link works.
+- Tag a release (`vX.Y.Z`). GitHub Actions builds and uploads `potxkit.mcpb` using `scripts/build_mcpb.py`.
+- For local builds: `python scripts/build_mcpb.py --version X.Y.Z`.
 - If the MCP command or args change, update the Cursor deep link config (base64 of `{\"potxkit\":{\"command\":\"uvx\",\"args\":[\"potxkit\"]}}`).
 - Click both install links to verify they still open correctly.
 
