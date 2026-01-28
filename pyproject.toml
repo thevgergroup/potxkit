@@ -1,6 +1,6 @@
 [project]
 name = "potxkit"
-version = "0.1.0"
+dynamic = ["version"]
 description = "POTX theme editor"
 authors = [
     {name = "patrick o'leary",email = "pjaol@pjaol.com"}
@@ -27,6 +27,13 @@ potxkit-cli = "potxkit.cli:main"
 [tool.poetry]
 packages = [{include = "potxkit", from = "src"}]
 include = ["src/potxkit/data/base.potx"]
+version = "0.0.0"
+
+[tool.poetry.requires-plugins]
+poetry-dynamic-versioning = {version = ">=1.9.1,<2.0.0", extras = ["plugin"]}
+
+[tool.poetry-dynamic-versioning]
+enable = true
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.10.0"
@@ -60,5 +67,8 @@ exclude = ["*/data/*"]
 
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = [
+    "poetry-core>=2.0.0,<3.0.0",
+    "poetry-dynamic-versioning>=1.9.1,<2.0.0",
+]
+build-backend = "poetry_dynamic_versioning.backend"
