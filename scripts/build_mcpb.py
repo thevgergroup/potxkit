@@ -51,8 +51,8 @@ def _write_manifest(dest: Path, version: str) -> None:
             "type": "uv",
             "entry_point": "src/server.py",
             "mcp_config": {
-                "command": "python",
-                "args": ["${__dirname}/src/server.py"],
+                "command": "uv",
+                "args": ["run", "${__dirname}/src/server.py"],
             },
         },
         "compatibility": {
