@@ -64,12 +64,6 @@ Directory structure:
     │       └── data/
     │           ├── __init__.py
     │           └── base.potx
-    ├── templates/
-    │   ├── Code_Janitor_Pilot.pptx
-    │   ├── Code_Janitor_Pilot_cleaned_named_pruned_mastermap_reindexed_sanitized.pptx
-    │   ├── Code_Janitor_Template.potx
-    │   ├── default-dark.potx
-    │   └── archive/
     ├── tests/
     │   ├── conftest.py
     │   ├── test_audit.py
@@ -7220,4 +7214,3 @@ jobs:
         run: poetry install
       - name: Run tests
         run: poetry run pytest
-
