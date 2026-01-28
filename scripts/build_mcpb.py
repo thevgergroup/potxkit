@@ -46,11 +46,14 @@ def _write_manifest(dest: Path, version: str) -> None:
         "description": "PowerPoint theme and template fixer for MCP",
         "author": {
             "name": "Patrick O'Leary",
-            "organization": "The VGER Group",
         },
         "server": {
             "type": "uv",
             "entry_point": "src/server.py",
+            "mcp_config": {
+                "command": "python",
+                "args": ["${__dirname}/src/server.py"],
+            },
         },
         "compatibility": {
             "platforms": ["darwin", "linux", "win32"],
