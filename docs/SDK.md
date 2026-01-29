@@ -135,6 +135,26 @@ Add to `.roo/mcp.json` (project) or `mcp_settings.json` (global):
 - If the MCP command or args change, update the Cursor deep link config (base64 of `{\"potxkit\":{\"command\":\"uvx\",\"args\":[\"potxkit\"]}}`).
 - Click both install links to verify they still open correctly.
 
+## Recommended usage patterns
+
+### Fix and standardize existing decks
+
+potxkit is designed to **repair and standardize real-world decks**:
+- Audit where formatting comes from (`audit`, `dump-tree`).
+- Strip local overrides (`set-slide --palette-none --fonts-none`).
+- Apply a consistent theme (`set-colors`, `set-fonts`, `set-theme-names`).
+- Convert representative slides into layouts (`make-layout`).
+
+### Build new templates from a website (agent-assisted)
+
+New layouts still require a base deck (layout geometry). Combine tools:
+1) Extract brand colors/fonts (browser MCP or provided assets).
+2) Generate a base deck (scripted or manual).
+3) Use potxkit to apply theme, normalize styles, and output `.potx`.
+
+If you’re using Claude Code, point it at the `SKILLS/brand-pptx-template/` skill
+and the potxkit MCP extension for a guided workflow.
+
 ## MCP tools (summary)
 
 - `info(path)`: theme colors/fonts + validation status.

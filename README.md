@@ -37,6 +37,39 @@ Using a CLI to fix templates is powerful but not friendly. Running potxkit as an
 - Set theme fonts, sizes, and layout images programmatically.
 - Let agents orchestrate the workflow with plain-language instructions.
 
+## Recommended usage patterns
+
+### 1) Fix and standardize an existing deck (most common)
+
+potxkit shines when you already have slides and want the **template to control them again**:
+- Inspect where formatting comes from (`audit`, `dump-tree`).
+- Strip local overrides (`set-slide --palette-none --fonts-none`).
+- Apply a consistent theme (`set-colors`, `set-fonts`, `set-theme-names`).
+- Turn representative slides into reusable layouts (`make-layout`).
+
+This is the fastest, most reliable path for real-world decks.
+
+### 2) Build a deck from a website (agent-assisted)
+
+Creating brand-new layouts still needs a **base deck** (layout shapes, text boxes, grids). You can:
+- Generate a base deck with a script (e.g., pptxgenjs).
+- Or start from a generic template and refine it manually.
+
+Then use potxkit to apply the theme, normalize styles, and produce a clean `.potx`.
+
+**Suggested agent workflow (Claude Code + skill + potxkit MCP):**
+1) Install the potxkit MCP extension (one-click `.mcpb` or config).
+2) Use the skill at `SKILLS/brand-pptx-template/` to extract brand colors/fonts.
+3) Generate a base deck (script or manual) with common slide types.
+4) Run potxkit to apply theme, create layouts, and validate.
+
+Example prompt for Claude Code:
+```
+Use the brand-pptx-template skill to create a base deck from https://example.com,
+then apply potxkit theme + layouts and deliver a .potx.
+Work in /Users/you/tmp/potxkit-test.
+```
+
 ## What you can do
 
 - Audit decks to see which slides override the master (colors, text, backgrounds, images).
