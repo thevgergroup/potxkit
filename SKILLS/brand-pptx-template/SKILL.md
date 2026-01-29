@@ -33,6 +33,13 @@ If the environments differ, always:
 
 Reference: `references/brand-extraction.js` for a browser snippet.
 
+### Variant chooser (light vs dark)
+Decide on a template mood before building slides:
+- **Light**: default for business decks; white/very light background with dark text.
+- **Dark**: good for technical or cinematic decks; dark background with light text.
+
+If the brand site uses both, pick one for the base template and keep the other for section/cover layouts.
+
 ### Phase 2: Map to PowerPoint theme slots
 Map to theme keys:
 - `dark1`, `light1`, `dark2`, `light2`
@@ -46,6 +53,11 @@ Recommended defaults:
 - Keep layout shapes clean and consistent; avoid hard-coded colors where possible.
 
 Reference: `references/pptxgenjs-starter.js` for a starting scaffold.
+Optional script: `scripts/scaffold_deck.js` to generate a minimal base deck:
+
+```bash
+node scripts/scaffold_deck.js --variant light --company "Acme Co" --out template-base.pptx
+```
 
 ### Phase 4: Apply theme + layouts with potxkit
 Use potxkit via MCP or CLI:
@@ -67,3 +79,4 @@ Use potxkit via MCP or CLI:
 ## References
 - Brand extraction script: `references/brand-extraction.js`
 - PptxGenJS scaffold: `references/pptxgenjs-starter.js`
+- Scaffold generator: `scripts/scaffold_deck.js`
